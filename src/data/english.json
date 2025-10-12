@@ -42,5 +42,20 @@
   "settingsNewRun": "New Run",
   
   "rewardPreBunk": "(Reward: +1 PRE-BUNK charge)",
-  "rewardCounterNarrative": "(Reward: +1 COUNTER-NARRATIVE charge)"
+  "rewardCounterNarrative": "(Reward: +1 COUNTER-NARRATIVE charge)",
+  "rewardPreBunk": "(Reward: +1 PRE-BUNK charge)",
+  "rewardCounterNarrative": "(Reward: +1 COUNTER-NARRATIVE charge)",
+  
+  "meterDisplayTugOfWar": "Bar",
+  "meterDisplayBrain": "Brain",
+  "meterDisplayMap": "Map",
+  "meterSelectLabel": "Meter Style:",
+  
+  "brainStateFragmented": "FRAGMENTED",
+  "brainStateResilient": "RESILIENT",
+  "brainStateNeutral": "NEUTRAL",
+  
+  "mapStateUnstable": "UNSTABLE",
+  "mapStateSecure": "SECURE",
+  "mapStateContested": "CONTESTED"
 }
