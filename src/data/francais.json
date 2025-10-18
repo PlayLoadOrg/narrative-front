@@ -1,0 +1,57 @@
+{
+  "appTitle": "FRONT NARRATIF",
+  "appSubtitle": "Exercice de maintien de la paix dirigé par l'OTAN en Europe de l'Est",
+  "presenter": "Pareto Syndicate Présente",
+  "credits": "Avec nos remerciements particuliers à la Division de Guerre Cognitive de l'OTAN",
+  "disclaimer": "Je m'engage à utiliser le matériel suivant pour la protection du Bien Commun, conformément à la Déclaration des Droits de l'Homme, à la Charte des Nations Unies et aux traités et accords de mon pays de résidence.",
+  "swearButton": "Je le Jure",
+  
+  "briefingText": "Cette ressource a été influencée par la documentation NATO Strategic Communications (StratCom) (en particulier [link: AJP-10](https://coi.nato.int/EWCOI/EW%20COI%20Shared%20Documents/EMO%20DOCTRINE%20PREP/AJP%20HARMONIZATION/AJP-10.1%20EDA%20V1%20E.pdf)) et améliorée grâce aux contributions de [link: professionnels NATO COGWAR](https://www.act.nato.int/activities/cognitive-warfare/). Dans l'environnement hautement interconnecté du 21e siècle, le théâtre principal de la guerre n'est plus cinétique, il est cognitif, et il est toujours présent.",
+  "learnButton": "\"Est-il possible d'apprendre ce pouvoir?\"",
+  "trialsButton": "\"Je suis prêt à affronter les épreuves.\"",
+  "doctrineProceed": "Procéder aux Épreuves",
+  "doctrineReturn": "Retour aux Épreuves",
+  
+  "meterLabel": "Indicateur:",
+  "fragmentationLabel": "FRAGMENTATION",
+  "neutralLabel": "NEUTRE",
+  "unityLabel": "UNITÉ",
+  
+  "roundLabel": "Tour",
+  "adversaryInject": "Injection Adversaire",
+  "yourResponse": "Votre Réponse:",
+  "outcomeTitle": "Résultat",
+  "nextRoundButton": "Tour Suivant",
+  "viewResultsButton": "Voir les Résultats",
+  "loading": "Chargement...",
+  
+  "endVictoryTitle": "VICTOIRE RÉSILIENTE",
+  "endVictoryMessage": "La population est restée résiliente. Les alliés sont restés unis, les opérations se sont poursuivies sans entrave et les tentatives adverses de déstabiliser la perception ont échoué.",
+  "endDefeatTitle": "DÉFAITE COGNITIVE",
+  "endDefeatMessage": "La désinformation a fracturé les alliances. Le soutien public s'est effondré et les narratifs adverses ont gagné en dominance.",
+  "endNeutralTitle": "STABILITÉ FRAGILE",
+  "endNeutralMessage": "Les tentatives adverses ont créé des turbulences, mais la résilience a tenu juste assez pour éviter l'effondrement.",
+  "playAgainButton": "Rejouer",
+  
+  "settingsTitle": "Options",
+  "settingsSoundOn": "Désactiver le Son",
+  "settingsSoundOff": "Activer le Son",
+  "settingsStudy": "Étudier la Doctrine",
+  "settingsNewRun": "Nouvelle Partie",
+  
+  "meterDisplayTugOfWar": "Barre",
+  "meterDisplayBrain": "Cerveau",
+  "meterDisplayMap": "Carte",
+  "meterSelectLabel": "Style d'Indicateur:",
+  
+  "brainStateFragmented": "FRAGMENTÉ",
+  "brainStateResilient": "RÉSILIENT",
+  "brainStateNeutral": "NEUTRE",
+  
+  "mapStateUnstable": "INSTABLE",
+  "mapStateSecure": "SÉCURISÉ",
+  "mapStateContested": "CONTESTÉ",
+  
+  "rewardPreBunk": "(Récompense: +1 charge PRÉ-DÉMYSTIFICATION)",
+  "rewardCounterNarrative": "(Récompense: +1 charge CONTRE-NARRATIF)"
+}

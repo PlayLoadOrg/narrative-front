@@ -1,0 +1,660 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-10-17",
+    "classification": "UNCLASSIFIED // FOR OFFICIAL USE ONLY",
+    "maintainer": "NATO StratCom COE",
+    "notes": "Component library for procedural scenario generation"
+  },
+  
+  "threatActors": [
+  {
+    "id": "state_media_outlet",
+    "name": "State-Controlled Media",
+    "notorietyRange": [7, 10],
+    "sophistication": "high",
+    "description": "Professional propaganda apparatus with state backing",
+    "typicalPlatforms": ["adversary_news", "coordinated_multi_platform"],
+    "preferredFrames": ["secret_agenda", "alliance_fracture", "intelligence_breach"],
+    "tags": ["state_backed", "professional", "coordinated"]
+  },
+  {
+    "id": "bot_network",
+    "name": "Automated Bot Network",
+    "notorietyRange": [3, 6],
+    "sophistication": "medium",
+    "description": "Coordinated automated accounts spreading narratives",
+    "typicalPlatforms": ["social_media", "messaging_apps"],
+    "preferredFrames": ["civilian_harm", "environmental_damage", "cultural_insensitivity"],
+    "tags": ["automated", "volume_based", "algorithmic"]
+  },
+  {
+    "id": "fringe_blogger",
+    "name": "Fringe Blogger/Influencer",
+    "notorietyRange": [1, 3],
+    "sophistication": "low",
+    "description": "Individual with limited reach but potential viral moment",
+    "typicalPlatforms": ["social_media", "blog_website"],
+    "preferredFrames": ["secret_agenda", "financial_corruption", "intelligence_breach"],
+    "tags": ["individual", "unpredictable", "low_credibility"]
+  },
+  {
+    "id": "coordinated_campaign",
+    "name": "Coordinated Influence Campaign",
+    "notorietyRange": [8, 10],
+    "sophistication": "very_high",
+    "description": "Multi-platform synchronized operation with resources",
+    "typicalPlatforms": ["all"],
+    "preferredFrames": ["all"],
+    "tags": ["sophisticated", "multi_platform", "state_level"]
+  },
+  {
+    "id": "local_activist_group",
+    "name": "Local Activist Organization",
+    "notorietyRange": [2, 5],
+    "sophistication": "low",
+    "description": "Genuine local group potentially manipulated or amplified",
+    "typicalPlatforms": ["social_media", "local_news"],
+    "preferredFrames": ["environmental_damage", "civilian_harm", "cultural_insensitivity"],
+    "tags": ["grassroots", "authentic_appearing", "amplifiable"]
+  },
+  {
+    "id": "compromised_journalist",
+    "name": "Compromised Media Figure",
+    "notorietyRange": [5, 8],
+    "sophistication": "high",
+    "description": "Credentialed journalist pushing adversary narratives",
+    "typicalPlatforms": ["adversary_news", "mainstream_pickup"],
+    "preferredFrames": ["alliance_fracture", "war_crimes", "intelligence_breach"],
+    "tags": ["credentialed", "dangerous", "legitimacy_threat"]
+  },
+  {
+    "id": "anonymous_source",
+    "name": "Anonymous Insider Claim",
+    "notorietyRange": [1, 7],
+    "sophistication": "variable",
+    "description": "Alleged insider leaking information",
+    "typicalPlatforms": ["social_media", "messaging_apps", "adversary_news"],
+    "preferredFrames": ["secret_agenda", "intelligence_breach", "alliance_fracture"],
+    "tags": ["anonymous", "unverifiable", "high_variance"]
+  }
+],
+  
+  "narrativeFrames": [
+    {
+      "id": "secret_agenda",
+      "name": "Hidden Malicious Intent",
+      "description": "Claims NATO operations have secret offensive/surveillance/control purposes",
+      "projectedImpactRange": [6, 9],
+      "actualImpactVariance": 0.3,
+      "textTemplates": [
+        "{evidence_type} reveals {target} {secret_action}",
+        "Leaked intelligence suggests {operation} is actually {real_purpose}",
+        "{source} claims exercise is cover for {hidden_objective}"
+      ],
+      "vulnerableToResponses": ["factcheck_thorough", "counter_transparency"],
+      "resistantToResponses": ["ignore"],
+      "tags": ["conspiracy", "intent", "strategic"]
+    },
+    {
+      "id": "civilian_harm",
+      "name": "Harm to Local Population",
+      "description": "Alleges NATO is damaging civilian welfare, safety, or livelihood",
+      "projectedImpactRange": [7, 10],
+      "actualImpactVariance": 0.2,
+      "textTemplates": [
+        "{evidence_type} shows {actor} {harmful_action}, causing {consequence}",
+        "Local civilians report {harmful_action} by {actor}",
+        "{incident_type} leaves {number} civilians {impact_state}"
+      ],
+      "vulnerableToResponses": ["counter_humanitarian", "factcheck_evidence"],
+      "resistantToResponses": ["discredit_light"],
+      "tags": ["humanitarian", "urgent", "emotional"]
+    },
+    {
+      "id": "alliance_fracture",
+      "name": "Internal NATO Division",
+      "description": "Suggests disagreement, distrust, or defection within alliance",
+      "projectedImpactRange": [5, 8],
+      "actualImpactVariance": 0.4,
+      "textTemplates": [
+        "{evidence_type} reveals {ally_nation} privately {dissent_action}",
+        "Behind closed doors, {number} allies express {concern_type}",
+        "{source} reports growing rift over {issue}"
+      ],
+      "vulnerableToResponses": ["discredit_source", "counter_unity"],
+      "resistantToResponses": ["factcheck_basic"],
+      "tags": ["strategic", "political", "high_uncertainty"]
+    },
+    {
+      "id": "environmental_damage",
+      "name": "Environmental Destruction",
+      "description": "Claims operations causing ecological harm",
+      "projectedImpactRange": [4, 7],
+      "actualImpactVariance": 0.25,
+      "textTemplates": [
+        "{evidence_type} shows {operation} causing {environmental_impact}",
+        "Environmental groups document {damage_type} from {activity}",
+        "Satellite imagery reveals {ecological_consequence}"
+      ],
+      "vulnerableToResponses": ["factcheck_photo", "counter_environmental"],
+      "resistantToResponses": ["ignore"],
+      "tags": ["environmental", "verifiable", "visual"]
+    },
+    {
+      "id": "cultural_insensitivity",
+      "name": "Cultural/Religious Offense",
+      "description": "Alleges disrespect or violation of local customs/values",
+      "projectedImpactRange": [5, 8],
+      "actualImpactVariance": 0.35,
+      "textTemplates": [
+        "{actor} caught {offensive_action} at {sacred_location}",
+        "Video shows {disrespectful_behavior} during {cultural_event}",
+        "Local religious leaders condemn {incident}"
+      ],
+      "vulnerableToResponses": ["counter_respect", "factcheck_context"],
+      "resistantToResponses": ["discredit_aggressive"],
+      "tags": ["cultural", "sensitive", "local_impact"]
+    },
+    {
+      "id": "financial_corruption",
+      "name": "Corruption/Profiteering",
+      "description": "Alleges financial misconduct or war profiteering",
+      "projectedImpactRange": [4, 7],
+      "actualImpactVariance": 0.3,
+      "textTemplates": [
+        "{evidence_type} exposes {financial_misconduct}",
+        "Defense contractors tied to {corruption_type}",
+        "Follow the money: {financial_claim}"
+      ],
+      "vulnerableToResponses": ["factcheck_financial", "discredit_moderate"],
+      "resistantToResponses": ["counter_narrative"],
+      "tags": ["financial", "corruption", "documentary"]
+    },
+    {
+      "id": "war_crimes",
+      "name": "War Crimes Allegation",
+      "description": "Serious allegations of rules of engagement violations",
+      "projectedImpactRange": [8, 10],
+      "actualImpactVariance": 0.15,
+      "textTemplates": [
+        "{evidence_type} appears to show {war_crime_type}",
+        "Witnesses describe {violation} by {actor}",
+        "Human rights groups investigate {incident}"
+      ],
+      "vulnerableToResponses": ["factcheck_comprehensive", "legal_response"],
+      "resistantToResponses": ["ignore", "discredit_light"],
+      "tags": ["critical", "legal", "high_stakes"]
+    },
+    {
+      "id": "intelligence_breach",
+      "name": "Security/Intelligence Failure",
+      "description": "Claims of operational security failures or leaks",
+      "projectedImpactRange": [6, 9],
+      "actualImpactVariance": 0.25,
+      "textTemplates": [
+        "{evidence_type} suggests {security_failure}",
+        "Adversaries claim access to {classified_information}",
+        "Breach reveals {sensitive_operation_detail}"
+      ],
+      "vulnerableToResponses": ["operational_silence", "discredit_source"],
+      "resistantToResponses": ["factcheck_basic"],
+      "tags": ["operational", "security", "sensitive"]
+    }
+  ],
+  
+  "evidenceTypes": [
+    {
+      "id": "fake_photo",
+      "name": "Fabricated Photograph",
+      "sophistication": "low",
+      "spreadSpeed": "fast",
+      "salienceMultiplier": 1.3,
+      "description": "Staged or manipulated still image",
+      "vulnerableToFactCheck": true,
+      "factCheckDifficulty": "easy",
+      "tags": ["visual", "common", "debunkable"]
+    },
+    {
+      "id": "deepfake_video",
+      "name": "AI-Generated Video",
+      "sophistication": "very_high",
+      "spreadSpeed": "viral",
+      "salienceMultiplier": 2.0,
+      "description": "Sophisticated AI-generated or manipulated video",
+      "vulnerableToFactCheck": true,
+      "factCheckDifficulty": "hard",
+      "tags": ["visual", "sophisticated", "high_impact"]
+    },
+    {
+      "id": "fake_document",
+      "name": "Forged Document",
+      "sophistication": "medium",
+      "spreadSpeed": "medium",
+      "salienceMultiplier": 1.1,
+      "description": "Fabricated memo, report, or official document",
+      "vulnerableToFactCheck": true,
+      "factCheckDifficulty": "medium",
+      "tags": ["documentary", "verifiable", "credibility"]
+    },
+    {
+      "id": "anonymous_testimony",
+      "name": "Anonymous Witness Account",
+      "sophistication": "low",
+      "spreadSpeed": "medium",
+      "salienceMultiplier": 0.9,
+      "description": "Unverifiable firsthand account",
+      "vulnerableToFactCheck": false,
+      "factCheckDifficulty": "impossible",
+      "tags": ["testimonial", "unverifiable", "emotional"]
+    },
+    {
+      "id": "out_of_context_real_footage",
+      "name": "Miscontextualized Real Media",
+      "sophistication": "medium",
+      "spreadSpeed": "fast",
+      "salienceMultiplier": 1.4,
+      "description": "Genuine footage presented with false context",
+      "vulnerableToFactCheck": true,
+      "factCheckDifficulty": "medium",
+      "tags": ["visual", "deceptive", "requires_context"]
+    },
+    {
+      "id": "data_manipulation",
+      "name": "Manipulated Statistics/Data",
+      "sophistication": "high",
+      "spreadSpeed": "slow",
+      "salienceMultiplier": 0.8,
+      "description": "Cherry-picked or fabricated data/statistics",
+      "vulnerableToFactCheck": true,
+      "factCheckDifficulty": "hard",
+      "tags": ["analytical", "technical", "credible_appearing"]
+    },
+    {
+      "id": "expert_impersonation",
+      "name": "Fake Expert Testimony",
+      "sophistication": "medium",
+      "spreadSpeed": "medium",
+      "salienceMultiplier": 1.2,
+      "description": "False credentials or fabricated expert opinion",
+      "vulnerableToFactCheck": true,
+      "factCheckDifficulty": "easy",
+      "tags": ["authority", "credibility", "debunkable"]
+    }
+  ],
+  
+  "platforms": [
+    {
+      "id": "social_media",
+      "name": "Social Media (General)",
+      "salienceMultiplier": 1.5,
+      "spreadSpeed": "fast",
+      "timeToAppearanceRange": [0.5, 4],
+      "description": "Facebook, Twitter/X, Instagram, TikTok",
+      "tags": ["public", "viral", "algorithmic"]
+    },
+    {
+      "id": "adversary_news",
+      "name": "Adversary-Controlled News Outlets",
+      "salienceMultiplier": 1.2,
+      "spreadSpeed": "medium",
+      "timeToAppearanceRange": [2, 8],
+      "description": "RT, state media, aligned outlets",
+      "tags": ["official_appearing", "coordinated", "persistent"]
+    },
+    {
+      "id": "messaging_apps",
+      "name": "Encrypted Messaging Platforms",
+      "salienceMultiplier": 0.8,
+      "spreadSpeed": "viral",
+      "timeToAppearanceRange": [0.25, 2],
+      "description": "Telegram, WhatsApp, Signal groups",
+      "tags": ["private", "difficult_to_track", "organic"]
+    },
+    {
+      "id": "mainstream_pickup",
+      "name": "Mainstream Media Coverage",
+      "salienceMultiplier": 2.5,
+      "spreadSpeed": "slow",
+      "timeToAppearanceRange": [6, 24],
+      "description": "Legitimate news outlets reporting the claim",
+      "tags": ["credible", "amplification", "critical"]
+    },
+    {
+      "id": "local_news",
+      "name": "Local/Regional News",
+      "salienceMultiplier": 1.0,
+      "spreadSpeed": "medium",
+      "timeToAppearanceRange": [3, 12],
+      "description": "Local newspapers, radio, community media",
+      "tags": ["local_impact", "trusted", "regional"]
+    },
+    {
+      "id": "blog_website",
+      "name": "Blog/Independent Website",
+      "salienceMultiplier": 0.6,
+      "spreadSpeed": "slow",
+      "timeToAppearanceRange": [4, 48],
+      "description": "Independent blogs, alternative media sites",
+      "tags": ["fringe", "variable_credibility", "slow_burn"]
+    },
+    {
+      "id": "coordinated_multi_platform",
+      "name": "Coordinated Cross-Platform Campaign",
+      "salienceMultiplier": 2.0,
+      "spreadSpeed": "viral",
+      "timeToAppearanceRange": [1, 6],
+      "description": "Simultaneous appearance across multiple platforms",
+      "tags": ["coordinated", "sophisticated", "high_threat"]
+    }
+  ],
+
+  "vocabularySlots": {
+    "actors": [
+      "NATO troops", "peacekeepers", "foreign soldiers", "military personnel",
+      "coalition forces", "the exercise participants", "armed forces",
+      "NATO commanders", "military leadership", "operation leadership"
+    ],
+    "actions_harmful": [
+      "hoarding fuel", "taking supplies", "stockpiling resources",
+      "requisitioning goods", "confiscating property", "seizing control of",
+      "blocking access to", "restricting movement near", "occupying"
+    ],
+    "locations": [
+      "local gas stations", "supply depots", "civilian stores",
+      "community centers", "residential areas", "public facilities",
+      "critical infrastructure", "transportation hubs", "medical facilities"
+    ],
+    "consequences": [
+      "shortages", "price increases", "hardship", "rationing",
+      "displacement", "economic disruption", "access denial", "safety concerns"
+    ],
+    "secret_actions": [
+      "planning offensive operations", "conducting unauthorized surveillance",
+      "establishing permanent bases", "preparing for regime change",
+      "gathering intelligence on civilians", "testing weapons systems",
+      "coordinating with intelligence agencies"
+    ],
+    "ally_nations": [
+      "France", "Germany", "Poland", "United Kingdom", "Italy",
+      "Spain", "Canada", "Turkey", "Netherlands", "Romania"
+    ],
+    "dissent_actions": [
+      "questioning the mission", "considering withdrawal",
+      "expressing concerns about costs", "doubting the strategy",
+      "requesting clarification on objectives", "reviewing their commitment"
+    ],
+    "environmental_impacts": [
+      "water contamination", "soil pollution", "wildlife disruption",
+      "deforestation", "air quality degradation", "habitat destruction",
+      "noise pollution affecting livestock", "groundwater contamination"
+    ],
+    "offensive_actions": [
+      "desecrating religious sites", "disrespecting cultural ceremonies",
+      "violating sacred spaces", "mocking local traditions",
+      "inappropriate behavior during religious observances"
+    ],
+    "war_crime_types": [
+      "excessive use of force", "targeting of civilians",
+      "destruction of civilian property", "mistreatment of detainees",
+      "use of prohibited weapons", "violation of medical neutrality"
+    ],
+    "security_failures": [
+      "compromised communications", "leaked operational plans",
+      "penetrated networks", "exposed troop movements",
+      "intercepted sensitive communications", "breached secure facilities"
+    ],
+    "numbers": [
+      "several", "multiple", "three", "five", "a handful of",
+      "numerous", "at least two", "senior"
+    ]
+  },
+
+  "prebunks": [
+    {
+      "id": "pb_001",
+      "title": "Fuel Hoarding Warning",
+      "description": "Pre-warn about staged scarcity claims",
+      "manpowerCost": 20,
+      "effectiveness": {
+        "baseSuccess": 0.7,
+        "reputationModifier": 0.15
+      },
+      "risks": {
+        "canBackfire": false,
+        "vulnerableToFactCheck": false
+      },
+      "tags": ["logistics", "scarcity"]
+    },
+    {
+      "id": "pb_002",
+      "title": "Deepfake Awareness",
+      "description": "Educate about AI-generated videos",
+      "manpowerCost": 25,
+      "effectiveness": {
+        "baseSuccess": 0.8,
+        "reputationModifier": 0.1
+      },
+      "risks": {
+        "canBackfire": false,
+        "vulnerableToFactCheck": false
+      },
+      "tags": ["deepfake", "AI"]
+    },
+    {
+      "id": "pb_003",
+      "title": "Manipulation Tactics Alert",
+      "description": "Warn about common disinformation techniques",
+      "manpowerCost": 15,
+      "effectiveness": {
+        "baseSuccess": 0.65,
+        "reputationModifier": 0.12
+      },
+      "risks": {
+        "canBackfire": false,
+        "vulnerableToFactCheck": false
+      },
+      "tags": ["general", "education"]
+    },
+    {
+      "id": "pb_004",
+      "title": "Out-of-Context Media Warning",
+      "description": "Inoculate against miscontextualized footage",
+      "manpowerCost": 18,
+      "effectiveness": {
+        "baseSuccess": 0.72,
+        "reputationModifier": 0.13
+      },
+      "risks": {
+        "canBackfire": false,
+        "vulnerableToFactCheck": false
+      },
+      "tags": ["media_literacy", "context"]
+    },
+    {
+      "id": "pb_005",
+      "title": "Anonymous Source Skepticism",
+      "description": "Educate about unverifiable claims",
+      "manpowerCost": 12,
+      "effectiveness": {
+        "baseSuccess": 0.6,
+        "reputationModifier": 0.1
+      },
+      "risks": {
+        "canBackfire": false,
+        "vulnerableToFactCheck": false
+      },
+      "tags": ["source_credibility", "verification"]
+    }
+  ],
+
+  "counterNarratives": [
+    {
+      "id": "cn_001",
+      "title": "Humanitarian Success Stories",
+      "description": "Highlight positive NATO engagement",
+      "manpowerCost": 25,
+      "effectiveness": {
+        "baseSuccess": 0.5,
+        "reputationModifier": 0.2
+      },
+      "risks": {
+        "canBackfire": false,
+        "vulnerableToFactCheck": true,
+        "vulnerabilityDescription": "Stories must be genuine"
+      },
+      "tags": ["humanitarian", "positive"]
+    },
+    {
+      "id": "cn_002",
+      "title": "Transparency Campaign",
+      "description": "Proactive media access to operations",
+      "manpowerCost": 35,
+      "effectiveness": {
+        "baseSuccess": 0.7,
+        "reputationModifier": 0.1
+      },
+      "risks": {
+        "canBackfire": false,
+        "vulnerableToFactCheck": false
+      },
+      "tags": ["transparency", "proactive"]
+    },
+    {
+      "id": "cn_003",
+      "title": "Community Partnership Highlight",
+      "description": "Showcase local cooperation and support",
+      "manpowerCost": 30,
+      "effectiveness": {
+        "baseSuccess": 0.6,
+        "reputationModifier": 0.15
+      },
+      "risks": {
+        "canBackfire": false,
+        "vulnerableToFactCheck": false
+      },
+      "tags": ["community", "partnership"]
+    },
+    {
+      "id": "cn_004",
+      "title": "Environmental Stewardship",
+      "description": "Demonstrate ecological responsibility",
+      "manpowerCost": 28,
+      "effectiveness": {
+        "baseSuccess": 0.55,
+        "reputationModifier": 0.17
+      },
+      "risks": {
+        "canBackfire": false,
+        "vulnerableToFactCheck": true,
+        "vulnerabilityDescription": "Claims must be verifiable"
+      },
+      "tags": ["environmental", "accountability"]
+    },
+    {
+      "id": "cn_005",
+      "title": "Alliance Unity Showcase",
+      "description": "Highlight cohesion and cooperation",
+      "manpowerCost": 32,
+      "effectiveness": {
+        "baseSuccess": 0.65,
+        "reputationModifier": 0.14
+      },
+      "risks": {
+        "canBackfire": false,
+        "vulnerableToFactCheck": false
+      },
+      "tags": ["alliance", "unity"]
+    }
+  ],
+
+  "factCheckRigors": [
+    {
+      "id": "fc_basic",
+      "title": "Basic Fact-Check",
+      "description": "Quick statement with minimal evidence",
+      "manpowerCost": 10,
+      "timeCost": 1,
+      "effectiveness": {
+        "baseSuccess": 0.3,
+        "reputationModifier": 0.1,
+        "timeDecayResistance": 0.5
+      }
+    },
+    {
+      "id": "fc_thorough",
+      "title": "Thorough Fact-Check",
+      "description": "Detailed evidence with expert citations",
+      "manpowerCost": 25,
+      "timeCost": 3,
+      "effectiveness": {
+        "baseSuccess": 0.6,
+        "reputationModifier": 0.15,
+        "timeDecayResistance": 0.7
+      }
+    },
+    {
+      "id": "fc_comprehensive",
+      "title": "Comprehensive Fact-Check",
+      "description": "Full investigation with multimedia evidence",
+      "manpowerCost": 50,
+      "timeCost": 6,
+      "effectiveness": {
+        "baseSuccess": 0.8,
+        "reputationModifier": 0.2,
+        "timeDecayResistance": 0.9
+      }
+    }
+  ],
+
+  "discreditRigors": [
+    {
+      "id": "ds_light",
+      "title": "Light Discrediting",
+      "description": "Point out source's questionable history",
+      "manpowerCost": 15,
+      "effectiveness": {
+        "baseSuccess": 0.4,
+        "reputationModifier": 0.1,
+        "sourceNotorietyBonus": 0.3
+      },
+      "risks": {
+        "canBackfire": true,
+        "backfireChance": 0.2,
+        "backfireDamage": -1
+      }
+    },
+    {
+      "id": "ds_moderate",
+      "title": "Moderate Discrediting",
+      "description": "Expose funding sources and affiliations",
+      "manpowerCost": 30,
+      "effectiveness": {
+        "baseSuccess": 0.6,
+        "reputationModifier": 0.15,
+        "sourceNotorietyBonus": 0.4
+      },
+      "risks": {
+        "canBackfire": true,
+        "backfireChance": 0.3,
+        "backfireDamage": -2
+      }
+    },
+    {
+      "id": "ds_aggressive",
+      "title": "Aggressive Discrediting",
+      "description": "Full exposé with legal evidence",
+      "manpowerCost": 60,
+      "effectiveness": {
+        "baseSuccess": 0.8,
+        "reputationModifier": 0.2,
+        "sourceNotorietyBonus": 0.5
+      },
+      "risks": {
+        "canBackfire": true,
+        "backfireChance": 0.4,
+        "backfireDamage": -4
+      }
+    }
+  ]
+}
