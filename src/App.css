@@ -419,7 +419,7 @@ body {
   margin-bottom: 0.75rem;
 }
 
-..response-category-button {
+.response-category-button {
   padding: 0.75rem 1rem;
   background-color: #000000; /* Solid black */
   border: 2px solid var(--slate-500);
