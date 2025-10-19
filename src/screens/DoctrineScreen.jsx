@@ -1,14 +1,14 @@
 // src/screens/DoctrineScreen.jsx
 import React from 'react';
 import doctrineData from '../data/AJP10summary.json';
-import ParetoLogoSVG from '../assets/PSlogo.svg';
+import narrativeFrontLogo from '../assets/narrativeFront.svg';
 
 export function DoctrineScreen({ onReturn, hasGameState, i18n }) {
   return (
     <div className="card doctrine-card">
       <header className="card-header">
         <span/>
-        <img src={ParetoLogoSVG} alt="Logo" className="header-logo" />
+        <img src={narrativeFrontLogo} alt="Logo" className="header-logo" />
       </header>
       <div className="doctrine-content">
         {doctrineData.map((item, index) => {

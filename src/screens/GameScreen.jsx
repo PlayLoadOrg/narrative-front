@@ -9,7 +9,7 @@ import { ResponseDetailPanel } from '../components/ResponseDetailPanel';
 import { DeckBuilder } from '../components/DeckBuilder';
 import { OutcomeScreen } from '../screens/OutcomeScreen';
 import { GAME_CONFIG } from '../constants';
-import ParetoLogoSVG from '../assets/PSlogo.svg';
+import narrativeFrontLogo from '../assets/narrativeFront.svg';
 import proceduralComponents from '../data/procedural.json';
 
 export function GameScreen({
@@ -182,7 +182,7 @@ export function GameScreen({
             <Shield className="header-icon" />
             <span className="header-title">{i18n.appTitle}</span>
           </div>
-          <img src={ParetoLogoSVG} alt="Logo" className="header-logo" />
+          <img src={narrativeFrontLogo} alt="Logo" className="header-logo" />
         </header>
         <div className="header-subtitle">{i18n.appSubtitle}</div>
         

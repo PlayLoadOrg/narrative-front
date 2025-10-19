@@ -1,14 +1,14 @@
 // src/screens/BriefingScreen.jsx
 import React from 'react';
 import { Typewriter } from '../components/Typewriter';
-import ParetoLogoSVG from '../assets/PSlogo.svg';
+import NarrativeFrontLogo from '../assets/narrativeFront.svg';
 
 export function BriefingScreen({ onLearn, onStart, i18n }) {
   return (
     <div className="card briefing-card">
       <header className="card-header">
         <span/>
-        <img src={ParetoLogoSVG} alt="Logo" className="header-logo" />
+        <img src={NarrativeFrontLogo} alt="Logo" className="header-logo" />
       </header>
       <div className="briefing-quote">
         <Typewriter text='"In war, truth is the first casualty."' speed={50} />

@@ -1,11 +1,11 @@
 // src/screens/StartScreen.jsx
 import React from 'react';
-import ParetoLogoSVG from '../assets/PSlogo.svg';
+import narrativeFrontLogo from '../assets/narrativeFront.svg';
 
 export function StartScreen({ onStart, i18n }) {
   return (
     <div className="card start-card">
-      <img src={ParetoLogoSVG} alt="Logo" className="logo" />
+      <img src={narrativeFrontLogo} alt="Logo" className="logo" />
       <div className="brand-text">{i18n.presenter}</div>
       <div className="credit-text">{i18n.credits}</div>
       <div className="title-container">
