@@ -532,6 +532,16 @@ body {
   cursor: pointer; 
   font-size: 1rem; 
   color: var(--white); 
+  
+  /* Add these for mobile */
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.button.active {
+  background-color: #000000; /* Solid black */
+  border: 2px solid var(--cyan-400);
 }
 
 .button:hover { transform: scale(1.05); }
