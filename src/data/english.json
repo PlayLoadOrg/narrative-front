@@ -1,17 +1,17 @@
 {
   "appTitle": "NARRATIVE FRONT",
-  "appSubtitle": "NATO-led peacekeeping exercise in Eastern Europe",
-  "presenter": "Pareto Syndicate Presents",
-  "credits": "With special thanks to NATO Cognitive Warfare Division",
+  "appSubtitle": "Scenario: NATO-led peacekeeping exercise in Eastern Europe",
+  "presenter": "By PLAYLOAD.ORG",
+  "credits": "High Calibur War Games",
   "disclaimer": "I commit to use the following material for the protection of the Common Good in alignment with the Declaration of Human Rights, the UN Charter, and in accordance with the treaties and agreements of my country of residence.",
   "swearButton": "This I Swear",
   
-  "briefingText": "This resource has been influenced by the NATO Strategic Communications (StratCom) documentation (especially [link: AJP-10](https://coi.nato.int/EWCOI/EW%20COI%20Shared%20Documents/EMO%20DOCTRINE%20PREP/AJP%20HARMONIZATION/AJP-10.1%20EDA%20V1%20E.pdf)) and improved based on input from [link: NATO COGWAR professionals](https://www.act.nato.int/activities/cognitive-warfare/). In the highly interconnected environment of the 21st century, the primary theater of war is no longer kinetic, it is cognitive, and it is ever present. Bad actors use nefarious techniques to destroy trust and spread lies that turn people against one another, but through citizen-government-alliance partnership, we are not defenseless. We have the power to win on the Narrative Front.",
-  "learnButton": "\"Is it possible to learn this power?\"",
-  "trialsButton": "\"I am ready to face the trials.\"",
+  "briefingText": "Operator, welcome to the Narrative Front.\n\nThe battlefield has shifted. It's no longer just land, sea, or air—it's the human mind. While our forces conduct a peacekeeping exercise in Eastern Europe, a different war is being waged in the information space.\n\nAdversaries are injecting weaponized narratives designed to sow chaos, fracture our alliances, and turn our citizens against each other. Their goal is to win the war by breaking our will before a single shot is fired.\n\nFrom this console, you are our first line of defense. You will monitor the information environment, analyze threats, and execute countermeasures. Your every decision will directly impact our society's slide towards FRAGMENTATION or its resilience in UNITY.\n\nThe fight for truth is now the fight for peace itself. Welcome to the cognitive war.",
+  "learnButton": "\"Learn about StratCom\"",
+  "trialsButton": "\"Ready to Play\"",
 
-  "doctrineProceed": "Proceed to the Trials",
-  "doctrineReturn": "Return to the Trials",
+  "doctrineProceed": "Begin Game",
+  "doctrineReturn": "Return to Game",
 
   "meterLabel": "Meter:",
   "fragmentationLabel": "FRAGMENTATION",

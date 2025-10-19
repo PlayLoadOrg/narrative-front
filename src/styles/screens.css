@@ -343,31 +343,6 @@
   margin-bottom: 0.75rem;
 }
 
-.response-category-button {
-  padding: 0.75rem 1rem;
-  background-color: var(--slate-700);
-  background-image: linear-gradient(to right, var(--slate-700), var(--slate-600));
-  border: 2px solid var(--slate-500);
-  text-align: center;
-  border-radius: 0.5rem;
-  font-size: 0.9rem;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-.response-category-button:hover {
-  background-image: linear-gradient(to right, var(--blue-700), var(--blue-600));
-  border-color: var(--blue-400);
-}
-
-.response-category-button.selected {
-  background-image: linear-gradient(to right, var(--blue-700), var(--blue-600));
-  border-color: var(--cyan-400);
-  box-shadow: 0 0 0 2px rgba(34, 211, 238, 0.3);
-}
 
 .check-icon-small {
   color: var(--green-400);

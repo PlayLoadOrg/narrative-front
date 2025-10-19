@@ -432,6 +432,13 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  color: white; /* Explicitly set text color */
+  
+  /* Mobile fixes */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .response-category-button:hover {
