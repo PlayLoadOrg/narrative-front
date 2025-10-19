@@ -419,10 +419,9 @@ body {
   margin-bottom: 0.75rem;
 }
 
-.response-category-button {
+..response-category-button {
   padding: 0.75rem 1rem;
-  background-color: var(--slate-700);
-  background-image: linear-gradient(to right, var(--slate-700), var(--slate-600));
+  background-color: #000000; /* Solid black */
   border: 2px solid var(--slate-500);
   text-align: center;
   border-radius: 0.5rem;
@@ -432,22 +431,21 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  color: white; /* Explicitly set text color */
+  color: white;
   
   /* Mobile fixes */
   -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   -webkit-tap-highlight-color: transparent;
 }
 
 .response-category-button:hover {
-  background-image: linear-gradient(to right, var(--blue-700), var(--blue-600));
+  background-color: var(--blue-700);
   border-color: var(--blue-400);
 }
 
 .response-category-button.selected {
-  background-image: linear-gradient(to right, var(--blue-700), var(--blue-600));
+  background-color: var(--blue-700);
   border-color: var(--cyan-400);
   box-shadow: 0 0 0 2px rgba(34, 211, 238, 0.3);
 }
