@@ -1,0 +1,424 @@
+
+  {
+
+  "meta": {
+    "title": "NARRATIVE FRONTOPEDIA",
+    "version": "0.1.0",
+    "description": "Strategic communications encyclopedia with tactical commentary",
+    "voice": "Filter - unnamed tactical advisor, Baltic origin implied through syntax and perspective",
+    "lastUpdated": "2025-01-20"
+  },
+
+  "concepts": {
+    "information_environment": {
+      "title": "Information Environment",
+      "category": "Concepts",
+      "short": "The contested space where narratives compete for belief.",
+      "filter_intro": "You are not fighting for territory. You are fighting for what people believe is true. This is harder.",
+      "body": "The information environment encompasses all systems and actors involved in collecting, processing, and disseminating information. In cognitive warfare, it becomes contested terrain - not physical ground, but the shared understanding that holds societies together.\n\nWhen the information environment fragments, consensus reality breaks down. People no longer disagree about policy - they disagree about what happened, what is real, what can be trusted. This is the adversary's goal. Not to convince, but to confuse. Not to win the argument, but to make argument impossible.",
+      "filter_commentary": "In 2007, we learned this in Estonia. Bronze Soldier incident. Adversary did not need Estonians to love Russia. Only needed Estonians to stop trusting each other, to stop trusting institutions. Cheaper than tanks, yes? And no NATO Article 5 for broken trust.",
+      "in_game": "The Information Environment Meter tracks societal cohesion. Drift toward fragmentation and the mission fails - not because of military defeat, but because the social fabric needed for peacekeeping has torn.",
+      "sources": [
+        "Pomerantsev, P. (2014). Nothing Is True and Everything Is Possible.",
+        "Rid, T. (2020). Active Measures: The Secret History of Disinformation."
+      ]
+    },
+
+    "cognitive_warfare": {
+      "title": "Cognitive Warfare",
+      "category": "Concepts",
+      "short": "Warfare targeting the mind, not the body.",
+      "filter_intro": "Kinetic warfare breaks things. Cognitive warfare breaks thinking. Guess which is easier to repair.",
+      "body": "Cognitive warfare exploits human psychology to influence perception, decision-making, and behavior without conventional military engagement. It weaponizes information, exploiting cognitive biases, emotional triggers, and social dynamics to achieve strategic objectives.\n\nUnlike traditional propaganda aimed at persuasion, modern cognitive warfare often aims at confusion, division, and erosion of institutional trust. The goal is not necessarily to make targets believe specific falsehoods, but to make them uncertain about all truth.",
+      "filter_commentary": "Western colleagues sometimes ask: 'How do we know when cognitive warfare is happening?' Baltic answer: it is always happening. Question is only intensity. Like weather - sometimes rain, sometimes storm, but sky is never empty.\n\nAdversary learned long ago: why fight NATO army when you can make NATO populations vote to leave? Why invade when you can make neighbor's citizens hate each other? Patience and packets. Very cost effective.",
+      "in_game": "Every scenario represents an adversary cognitive attack. Your responses shape whether the attack succeeds, fails, or - most often - achieves partial effects that accumulate over time.",
+      "sources": [
+        "Cluzel, F. (2020). 'Cognitive Warfare.' NATO Innovation Hub.",
+        "Giles, K. (2016). 'Handbook of Russian Information Warfare.' NATO Defense College."
+      ]
+    },
+
+    "narrative_hardening": {
+      "title": "Narrative Hardening",
+      "category": "Concepts",
+      "short": "The process by which stories become resistant to correction.",
+      "filter_intro": "Fresh lie is soft, like clay. Old lie is hard, like brick. You cannot reshape brick.",
+      "body": "Narrative hardening describes how misinformation becomes increasingly resistant to correction over time. When people first encounter a claim, they remain somewhat open to counter-evidence. But as hours pass, psychological processes cement the narrative in place:\n\n• Social commitment: People share the claim, publicly staking identity on it\n• Confirmation seeking: People find 'evidence' supporting what they already believe\n• Source amnesia: People forget where they heard it but remember the claim\n• Emotional encoding: Strong feelings burn memories deeper than facts\n\nAfter 48-72 hours, correction becomes exponentially harder. After a week, you are no longer fighting the narrative - you are fighting memory itself.",
+      "filter_commentary": "This is why speed matters, but also why speed is not enough. Adversary knows we will be slow - bureaucracy, verification, approval chains. So adversary designs for this. Plants seed, waits for hardening, then watches us try to dig up tree with roots already deep.\n\nBest defense is not faster response. Is preparing ground before seed is planted. This is pre-bunking.",
+      "in_game": "The 'Hours Active' intelligence metric reflects hardening. Low hours mean softer narratives. High hours mean you face entrenched beliefs requiring different approaches.",
+      "sources": [
+        "Lewandowsky, S., et al. (2012). 'Misinformation and Its Correction.' Psychological Science in the Public Interest.",
+        "Walter, N., & Murphy, S. T. (2018). 'How to Unring the Bell.' Communication Monographs."
+      ]
+    },
+
+    "continued_influence_effect": {
+      "title": "The Continued Influence Effect",
+      "category": "Concepts",
+      "short": "Why corrections fail even when people accept them.",
+      "filter_intro": "You can make person say 'yes, I was wrong.' Person will still think old way. Brain is not so simple.",
+      "body": "The continued influence effect is one of the most frustrating findings in misinformation research: even when people acknowledge a correction and accept that the original information was false, they continue to be influenced by the misinformation in their reasoning and judgments.\n\nThis occurs because human memory is not like computer storage. We do not simply delete old files. The original misinformation remains encoded, connected to emotional responses and other memories. The correction adds a 'tag' saying 'this is wrong,' but the original associations persist.\n\nRetraction is especially ineffective when:\n• The misinformation fits existing beliefs or worldviews\n• Emotional stakes are high\n• The false narrative is more coherent or compelling than the truth\n• Significant time has passed since initial exposure",
+      "filter_commentary": "I have seen this many times. Press conference, evidence presented, journalists nod, correction published. Next week, same journalists write stories using old false framing. Not malice - just how brain works.\n\nThis is why adversary does not need lie to survive investigation. Only needs lie to exist long enough to leave mark. Correction comes, makes small headline. But damage is done. Scar remains.\n\nSome Western colleagues still believe: 'Truth will win in end.' Very optimistic. Very American. In Baltics we learn: truth needs help. Much help.",
+      "in_game": "High 'Hours Active' scenarios face continued influence penalties. Even successful fact-checks in late-stage narratives may show reduced meter gains - the correction works, but shadows remain.",
+      "sources": [
+        "Johnson, H. M., & Seifert, C. M. (1994). 'Sources of the Continued Influence Effect.' Journal of Experimental Psychology.",
+        "Ecker, U. K., et al. (2022). 'The Psychological Drivers of Misinformation Belief.' Nature Reviews Psychology."
+      ]
+    },
+
+    "inoculation_theory": {
+      "title": "Inoculation Theory",
+      "category": "Concepts",
+      "short": "Psychological vaccination against manipulation.",
+      "filter_intro": "You give small dose of virus to build immunity, yes? Same works for lies. Show people the technique before adversary uses it.",
+      "body": "Inoculation theory, developed by psychologist William McGuire in the 1960s, applies the logic of vaccination to persuasion resistance. Just as weakened pathogens train the immune system, exposure to weakened forms of manipulation can train the mind to resist future attacks.\n\nEffective inoculation has two components:\n\n1. Warning: Alert audiences that manipulation attempts are coming\n2. Exposure: Show them examples of the techniques that will be used\n\nThis 'pre-bunking' approach has proven more effective than fact-checking in multiple studies. People who have been inoculated recognize manipulation attempts when they encounter them, triggering skepticism before the misinformation can take hold.",
+      "filter_commentary": "In Baltic schools now, children learn to identify manipulation techniques. Not specific lies - techniques. 'This is how fake news article looks. This is emotional manipulation. This is false balance.' Generation that grows up with this training is much harder to fool.\n\nPre-bunking is investment. Does not help with fire burning now. But when next fire starts, inoculated population reaches for extinguisher instead of gasoline.\n\nAdversary hates this. Cannot prepare counter to audience that knows all the tricks. Must constantly innovate. Makes operations expensive, uncertain. This is how small country survives against big neighbor with many resources - make every operation cost more than it gains.",
+      "in_game": "Pre-bunking builds persistent defense. Success creates 'inoculation tags' on narrative themes. When similar themes appear in later rounds, you receive defensive bonuses. The investment pays off over time.",
+      "sources": [
+        "McGuire, W. J. (1961). 'Resistance to Persuasion.' Advances in Experimental Social Psychology.",
+        "Roozenbeek, J., & van der Linden, S. (2019). 'Fake News Game Confers Psychological Resistance.' Palgrave Communications.",
+        "Compton, J. (2013). 'Inoculation Theory.' The SAGE Handbook of Persuasion."
+      ]
+    },
+
+    "streisand_effect": {
+      "title": "The Streisand Effect",
+      "category": "Concepts",
+      "short": "When suppression amplifies.",
+      "filter_intro": "Sometimes best way to make story big is to try making it go away. Adversary knows this. Sometimes adversary wants you to overreact.",
+      "body": "Named after Barbara Streisand's failed 2003 lawsuit to suppress aerial photographs of her home (which drew massive public attention to previously obscure images), the Streisand Effect describes how attempts to censor or suppress information can dramatically increase its spread.\n\nThe psychology is straightforward: suppression signals importance. If powerful institutions are trying to hide something, it must be significant. This triggers curiosity, sharing, and preservation instincts ('save this before it's deleted').\n\nFor strategic communications, this creates a dilemma: aggressive responses to misinformation can amplify it. Particularly risky:\n• Legal threats against small sources\n• Official denials that seem defensive or panicked\n• Visible efforts to remove content from platforms\n• Any response disproportionate to the original claim's reach",
+      "filter_commentary": "Adversary sometimes plants small story in obscure place. Waits. Hopes we will overreact, send lawyers, demand removal. Then adversary amplifies: 'Look what NATO is trying to hide!' Small story becomes big story. We did adversary's work for free.\n\nThis is why 'Ignore' is sometimes correct. Not often. But sometimes. Small fire in empty field - let it burn, burns out. Small fire you pour gasoline on - now you have problem.\n\nJudgment is everything. No formula for this. Only experience, and willingness to accept that sometimes doing nothing is hardest choice.",
+      "in_game": "Aggressive responses (Discredit Source especially) carry Streisand risk on low-visibility scenarios. Check 'Bot Amplification' - low amplification with overreaction can trigger backfire outcomes.",
+      "sources": [
+        "Jansen, S. C., & Martin, B. (2015). 'The Streisand Effect and Censorship Backfire.'",
+        "Nyman-Metcalf, K. (2018). 'Freedom of Expression and the Right to Be Forgotten in the Baltics.'"
+      ]
+    }
+  },
+
+  "response_types": {
+    "fact_check_basic": {
+      "title": "Fact-Check (Basic)",
+      "category": "Response Types",
+      "short": "Rapid response with core evidence.",
+      "cost": 1,
+      "filter_intro": "Fast, simple, cheap. Points at lie, shows evidence. Sometimes enough. Sometimes not.",
+      "body": "Basic fact-checking provides rapid correction of false claims using readily available evidence. The goal is speed over comprehensiveness - get accurate information into circulation before the false narrative hardens.\n\nEffective basic fact-checks:\n• Lead with the truth, not the myth (avoid repeating the lie prominently)\n• Provide clear, verifiable evidence\n• Use simple language accessible to general audiences\n• Deploy within hours, not days\n\nLimitations:\n• May lack depth to convince skeptics\n• Can appear reactive or defensive\n• Easily dismissed by committed believers\n• Reaches primarily those already inclined to check facts",
+      "filter_commentary": "Basic fact-check is workhorse. Not glamorous, but necessary. Like infantry - will not win war alone, but cannot win without.\n\nProblem: people who check facts are people who already doubt lies. True believers do not read your fact-check. They read adversary's response to your fact-check.\n\nStill, must do it. Creates reference point. Journalists can cite. Undecided people can find. And sometimes, simple clear evidence is enough. Not always, but sometimes.",
+      "when_effective": "Fresh narratives (low Hours Active), simple factual claims, audiences not yet committed to the false narrative.",
+      "when_risky": "Hardened narratives, emotionally charged claims, conspiracy theories where correction feeds the conspiracy.",
+      "in_game": "Low cost, moderate success rates. Effectiveness decreases as Hours Active increases. Better against 'False' veracity than 'Misleading' claims.",
+      "sources": [
+        "Chan, M. S., et al. (2017). 'Debunking: A Meta-Analysis.' Psychological Science.",
+        "Walter, N., & Tukachinsky, R. (2020). 'A Meta-Analytic Examination of Fact-Checking Effectiveness.'"
+      ]
+    },
+
+    "fact_check_thorough": {
+      "title": "Fact-Check (Thorough)",
+      "category": "Response Types",
+      "short": "Comprehensive debunking with technical analysis.",
+      "cost": 3,
+      "filter_intro": "Slower, deeper, more expensive. Brings experts, documents, forensic analysis. Harder to dismiss. Also harder to read.",
+      "body": "Thorough fact-checking goes beyond simple correction to provide comprehensive debunking with multiple evidence streams. For sophisticated disinformation (deepfakes, forged documents, complex conspiracy theories), surface-level correction is insufficient.\n\nThorough fact-checks include:\n• Technical/forensic analysis (image verification, document authentication)\n• Expert testimony and credentials\n• Primary source documentation\n• Timeline reconstruction\n• Source network analysis\n\nThis approach sacrifices speed for credibility and depth. It aims to create an authoritative reference that can convince skeptical audiences, support journalists, and serve as a lasting counter-record.",
+      "filter_commentary": "When adversary invests in sophisticated attack - deepfake, professional forgery - basic fact-check looks weak. 'NATO says video is fake' versus 'Here is frame-by-frame analysis showing pixel artifacts, here is metadata showing file created in different timezone, here is voice analysis showing splicing.'\n\nSecond version is harder to dismiss. Also harder to produce. Takes time, expertise, coordination.\n\nTrade-off is always same: speed versus depth. Against sophisticated attack, depth often wins. Against simple rumor, speed matters more.\n\nAlso consider: thorough response signals threat is serious. Sometimes this is good - shows you take seriously. Sometimes bad - makes small thing look big. Judgment, always judgment.",
+      "when_effective": "Deepfakes, forged documents, sophisticated coordinated attacks, situations where credibility battle matters.",
+      "when_risky": "Simple rumors (overkill response), time-sensitive crises where speed matters more than depth, low-visibility attacks where thorough response amplifies.",
+      "in_game": "Higher cost, higher success ceiling. Significant bonus against sophisticated attacks (high Damage Potential). Risk of Streisand effect on low-visibility scenarios.",
+      "sources": [
+        "Wardle, C. (2019). 'First Draft's Essential Guide to Understanding Information Disorder.'",
+        "Witness.org. 'Deepfake Detection and Media Forensics Protocols.'"
+      ]
+    },
+
+    "pre_bunk": {
+      "title": "Pre-Bunk",
+      "category": "Response Types",
+      "short": "Inoculate before the attack arrives.",
+      "cost": 2,
+      "filter_intro": "You cannot stop every lie. But you can prepare audience to recognize lies when they come. This is pre-bunking.",
+      "body": "Pre-bunking applies inoculation theory to strategic communications: rather than waiting for misinformation to spread and then correcting it, you proactively warn audiences about manipulation techniques and narrative patterns before they encounter them.\n\nEffective pre-bunking:\n• Identifies likely adversary narratives based on known playbooks\n• Explains the manipulation techniques that will be used\n• Provides 'if you see X, be skeptical' frameworks\n• Builds media literacy without creating partisan divisions\n\nPre-bunking does not require predicting specific lies - it teaches pattern recognition. 'Watch for stories that make you angry at [ally]. Ask who benefits.' This transfers across many specific narratives.",
+      "filter_commentary": "Pre-bunking is closest thing to strategic weapon in information war. All other responses are reactive - fire already burning, you bring water. Pre-bunking makes building fire-resistant.\n\nBut is investment, not solution. Pre-bunk today does not help with attack today. Helps with attack next week, next month. Politicians and commanders want results now. Pre-bunking requires patience, long view.\n\nAlso: cannot pre-bunk everything. Must choose. What themes will adversary use? Resource scarcity, atrocities, betrayal, conspiracy - these are common. But adversary adapts. Pre-bunk one technique, adversary develops new technique.\n\nStill, is most valuable tool. Every hour spent on inoculation saves many hours on correction. And correction often fails. Inoculation often succeeds.",
+      "when_effective": "Before anticipated campaigns, for predictable narrative patterns, building long-term resilience.",
+      "when_risky": "When immediate crisis requires immediate response, when specific pre-bunk is too narrow and adversary pivots.",
+      "in_game": "Does not directly address current scenario. Instead, builds persistent 'inoculation' against similar future narratives. Investment that pays off in later rounds.",
+      "sources": [
+        "van der Linden, S., et al. (2020). 'Inoculating Against Misinformation.' Science.",
+        "Roozenbeek, J., et al. (2022). 'Psychological Inoculation Against Misinformation.' Science Advances."
+      ]
+    },
+
+    "counter_narrative": {
+      "title": "Counter-Narrative",
+      "category": "Response Types",
+      "short": "Don't fight the story. Tell a better one.",
+      "cost": 2,
+      "filter_intro": "Sometimes arguing about lies makes lies stronger. Better to tell different story. One that is true, and also good.",
+      "body": "Counter-narrative strategy shifts from defensive debunking to offensive storytelling. Rather than engaging with adversary claims directly, you offer an alternative narrative that addresses the same underlying concerns while pointing toward different conclusions.\n\nEffective counter-narratives:\n• Acknowledge legitimate underlying grievances\n• Provide emotional resonance, not just facts\n• Feature authentic voices and human stories\n• Create positive identity connection, not just negative debunking\n\nThis approach recognizes that narratives succeed not because they're accurate, but because they meet psychological needs - for explanation, belonging, dignity, agency. Counter-narratives must meet those same needs.",
+      "filter_commentary": "Adversary story: 'NATO does not care about local people, only about military objectives.'\n\nBad response: 'That is false, NATO does care about local people.'\n\nBetter response: Story about NATO doctor treating local child. Story about soldiers learning local language. Story about community project partnership. Let people see caring, not hear denial of not-caring.\n\nDoes not mean ignore lies. But sometimes best response to lie is not argument about lie - is demonstration of truth. Show, not tell.\n\nRisk: can look like changing subject, avoiding issue. If adversary claims atrocity and you respond with feel-good story, looks evasive. Must be careful with tone and timing.",
+      "when_effective": "Division narratives, attacks on legitimacy/trust, emotionally charged situations where facts alone fail.",
+      "when_risky": "Specific factual claims requiring direct address, serious accusations that cannot be ignored, situations where subject change appears evasive.",
+      "in_game": "Most effective against alliance fracture and legitimacy attacks. Can synergize with fact-checking (address lie AND tell better story). Risky on civilian harm claims.",
+      "sources": [
+        "Braddock, K. (2019). 'Vaccinating Against Hate: Using Attitudinal Inoculation to Confer Resistance to Persuasion by Extremist Propaganda.'",
+        "Moonshot CVE. 'Counter-Narrative Handbook.'"
+      ]
+    },
+
+    "discredit_source": {
+      "title": "Discredit Source",
+      "category": "Response Types",
+      "short": "Attack the messenger.",
+      "cost": 2,
+      "filter_intro": "If people do not trust messenger, they do not trust message. But attacking messenger is dangerous. Can backfire badly.",
+      "body": "Source discrediting shifts attention from the claim to the claimant. Rather than debating whether the information is true, you demonstrate why the source should not be trusted - revealing funding, affiliations, track record of falsehood, or deliberate manipulation.\n\nThis approach can be effective because trust in sources acts as a cognitive shortcut. People lack time to verify every claim, so they rely on source credibility. Destroying that credibility undermines all content from that source.\n\nHowever, source attacks carry significant risks:\n• Appears defensive - 'attacking the messenger'\n• Can create martyrs - 'persecuted for telling truth'\n• Commits the ad hominem fallacy in audiences' eyes\n• May not address the specific claim at all",
+      "filter_commentary": "Source discrediting is high-risk tool. Use carefully.\n\nWorks when: source is already suspected, evidence of bad faith is clear and documented, audience is persuadable.\n\nBackfires when: source has sympathizers, evidence is weak, you look like powerful actor bullying small voice.\n\nAdversary sometimes uses sacrificial sources. Small blog, unknown 'journalist.' Knows we might attack source. When we do, amplifies: 'Look, NATO fears this brave truth-teller.' Source becomes famous. Message spreads.\n\nBetter approach often: address claim first, mention source issues as context. 'Claim is false because [evidence]. Worth noting source has history of [fabrication].' Order matters - lead with substance.",
+      "when_effective": "Known disinformation actors with documented track record, state-affiliated media with clear evidence, situations where source is more vulnerable than message.",
+      "when_risky": "Unknown or sympathetic sources, situations where source can claim persecution, when evidence of bad faith is circumstantial.",
+      "in_game": "Highest variance response. When it works, very effective. When it fails, significant backfire. Check Bot Amplification - low amplification attacks may not be worth the discrediting risk.",
+      "sources": [
+        "Nimmo, B. (2020). 'Exposing Secondary Infektion.' Graphika.",
+        "Rid, T. (2020). Active Measures: The Secret History of Disinformation."
+      ]
+    },
+
+    "strategic_silence": {
+      "title": "Strategic Silence",
+      "category": "Response Types",
+      "short": "Sometimes the winning move is not to play.",
+      "cost": 0,
+      "filter_intro": "Every response costs something. Every response gives adversary information. Sometimes silence is strategy, not surrender.",
+      "body": "Strategic silence - deliberately choosing not to respond - is the most counterintuitive tool in information warfare. When facing attack, instinct demands response. But response itself has costs:\n\n• Amplifies visibility of the original claim\n• Signals the claim is threatening enough to warrant attention\n• Gives adversary a target for counter-response\n• Consumes resources that could be used elsewhere\n\nSome narratives are designed to provoke overreaction. Adversaries may plant marginal stories hoping official response will elevate them. The Streisand Effect is a weapon in their arsenal.\n\nStrategic silence works when:\n• The narrative has limited organic reach\n• The claim is too absurd to survive scrutiny\n• Response would amplify more than suppress\n• Resources are needed for higher-priority threats",
+      "filter_commentary": "Hardest decision in this work: when to stay quiet. Everything inside says 'respond, fight back, do not let lie stand.' But sometimes this is wrong.\n\nI have seen small story in small outlet. No one reading, no one sharing. But someone important sees, gets angry, demands response. Response becomes the story. 'NATO denies [thing most people never heard of].' Now everyone has heard of it.\n\nBut silence is also dangerous. Let lie spread, becomes truth. Let adversary see you do not respond, becomes bold.\n\nNo formula. Only judgment. And willingness to defend decision either way - to say 'we chose silence for these reasons' or 'we chose response for these reasons.' Both can be right. Both can be wrong. Welcome to cognitive warfare.",
+      "when_effective": "Low-amplification rumors, absurd claims, obvious traps designed to provoke overreaction.",
+      "when_risky": "Any claim with significant organic spread, serious accusations, emotionally resonant narratives, silence easily framed as admission.",
+      "in_game": "Zero cost but high risk. Check Bot Amplification and Emotional Resonance - low values suggest silence may work. High values mean silence is dangerous. Cannot combine with other responses - it represents a decision not to act.",
+      "sources": [
+        "Phillips, W. (2018). 'The Oxygen of Amplification.' Data & Society.",
+        "Marwick, A., & Lewis, R. (2017). 'Media Manipulation and Disinformation Online.'"
+      ]
+    }
+  },
+
+  "intelligence_metrics": {
+    "hours_active": {
+      "title": "Hours Active",
+      "category": "Intelligence Metrics",
+      "short": "How long the narrative has been circulating.",
+      "filter_intro": "Time is enemy. Fresh lie is soft. Old lie is hard. This number tells you how hard.",
+      "body": "Hours Active measures the duration a hostile narrative has been circulating before reaching the strategic communications team's attention. This metric is crucial because misinformation resistance to correction increases dramatically over time.\n\nThe narrative lifecycle follows a predictable pattern:\n\n0-12 hours: Emergence. Narrative is fresh, audiences are not committed, correction is most effective.\n\n12-48 hours: Spread. Narrative is gaining traction, some social commitment forming, but still correctable.\n\n48-96 hours: Hardening. Narrative is embedding in group identity, fact-checking effectiveness declining, counter-narratives become more valuable.\n\n96+ hours: Entrenchment. Correction faces continued influence effect, only pre-bunk payoffs and powerful counter-narratives remain effective.",
+      "filter_commentary": "Western systems often too slow. Detection, verification, approval, legal review, translation, coordination. Many hours pass. Adversary plans for this.\n\nIn Baltics we learn: need pre-authorized responses. Playbook ready. When attack comes, do not start from zero. Match pattern, deploy counter. Hours, not days.\n\nStill, some attacks are novel. Need verification, need careful response. Tension between speed and accuracy. Move too fast, make mistakes adversary exploits. Move too slow, narrative hardens.\n\nNo perfect answer. Only trade-offs.",
+      "in_game": "Affects fact-checking modifiers. Scenarios with high Hours Active (48+) penalize reactive responses and reward prior pre-bunking. Low Hours Active gives fact-checking bonus but demands speed.",
+      "mechanical_effects": {
+        "0-12h": "+15% fact-check success",
+        "12-48h": "No modifier",
+        "48-96h": "-15% fact-check success",
+        "96h+": "-30% fact-check success, counter-narrative bonus"
+      }
+    },
+
+    "bot_amplification": {
+      "title": "Bot Amplification",
+      "category": "Intelligence Metrics",
+      "short": "How much of the spread is artificial.",
+      "filter_intro": "Real people sharing, or machines pretending to be people? Difference matters for response.",
+      "body": "Bot Amplification estimates the percentage of a narrative's spread attributable to coordinated inauthentic behavior - automated accounts, troll farms, and coordinated human operators working to artificially inflate visibility.\n\nHigh bot amplification (60%+) suggests:\n• State or state-adjacent operation with resources\n• Narrative may not have genuine popular support\n• Removing amplification could collapse the spread\n• Source discrediting may be particularly effective\n\nLow bot amplification (under 30%) suggests:\n• Organic spread among genuine users\n• Narrative resonates with real grievances/beliefs\n• Fact-checking may be more effective\n• Conspiracy theories with true believers",
+      "filter_commentary": "High bot numbers look scary but can be good news. Means narrative needs artificial help to spread. Cut the amplification, narrative dies.\n\nLow bot numbers are scarier. Means real people believe, share, argue. Cannot turn off real people. Cannot ban organic belief.\n\nConspiracy theories often have low bot amplification. True believers do not need bots - they have passion. This makes conspiracies very difficult. Adversary plants seed, then watches organic growth.\n\nWhen you see high bot amplification, think: 'This is operation. Who is running? What do they want?' When you see low amplification, think: 'This is belief. What need does it meet? What fear does it address?'",
+      "in_game": "Affects Streisand risk and response strategy. High amplification means aggressive responses (discredit) may work. Low amplification means aggressive responses risk creating martyrs and backfiring.",
+      "mechanical_effects": {
+        "0-30%": "Organic spread; discredit carries backfire risk",
+        "30-60%": "Mixed spread; standard probabilities apply",
+        "60%+": "Coordinated campaign; discredit bonus, ignore very dangerous"
+      }
+    },
+
+    "damage_potential": {
+      "title": "Damage Potential",
+      "category": "Intelligence Metrics",
+      "short": "How bad could this get if unchecked.",
+      "filter_intro": "Some lies are annoying. Some lies start wars. This number tells you which.",
+      "body": "Damage Potential assesses the maximum negative impact a narrative could have on the information environment if left completely unchecked. This is not a prediction of what will happen, but an estimate of worst-case trajectory.\n\nFactors increasing damage potential:\n• Threat to physical safety (incitement, targeting)\n• Potential for real-world violence or unrest\n• Strategic value to adversary objectives\n• Difficulty of correction once established\n• Impact on institutional trust\n• Potential for cascade effects\n\nA scale of 1-10:\n1-3: Nuisance. Annoying but limited impact.\n4-6: Concerning. Could damage mission effectiveness.\n7-8: Serious. Potential for significant harm.\n9-10: Critical. Could cause mission failure or real-world casualties.",
+      "filter_commentary": "Not all attacks are equal. Some are probing, testing. Some are diversions. Some are main effort.\n\nAdversary has limited resources too. When they invest heavily - sophisticated production, major amplification, careful timing - they expect return. High damage potential attack is not accident. Is priority.\n\nBut careful: sometimes low damage potential attack is bait. Make us respond, waste resources, while real attack comes elsewhere. Or make us overreact, create Streisand effect, turn nothing into something.\n\nDamage potential helps prioritize. But is not only factor. Low damage, high amplification? Maybe need to act. High damage, low spread? Maybe can wait. Context always matters.",
+      "in_game": "Determines meter impact on outcomes. High damage potential scenarios have larger swings - success matters more, failure hurts more.",
+      "mechanical_effects": {
+        "1-3": "Small meter swings (±1)",
+        "4-6": "Medium meter swings (±2)",
+        "7-8": "Large meter swings (±3)",
+        "9-10": "Critical meter swings (±4 or more)"
+      }
+    },
+
+    "veracity": {
+      "title": "Veracity Assessment",
+      "category": "Intelligence Metrics",
+      "short": "Is the core claim true, false, or somewhere between?",
+      "filter_intro": "Not all adversary claims are lies. Sometimes worst attacks use truth. This makes response much harder.",
+      "body": "Veracity Assessment evaluates the factual accuracy of a narrative's core claim. This is crucial because different veracity levels require fundamentally different response strategies.\n\nFalse: Core claim is fabricated. Standard debunking applies.\n\nMisleading: Contains true elements but framed deceptively. Fact-checking must acknowledge truth while correcting framing.\n\nMostly True: Substantially accurate but weaponized through selective presentation. Direct debunking backfires; counter-narrative more appropriate.\n\nTrue: Accurate information deployed strategically to harm. Cannot fact-check; must provide context, counter-narrative, or strategic silence.",
+      "filter_commentary": "Adversary sophistication shows in veracity choice. Amateur uses obvious lies. Professional uses truth.\n\n'NATO forces are conducting exercises near border.' True. Also alarming without context. Cannot say 'false' - is true. Must say 'true, and here is why this is normal, here is why this does not threaten.'\n\nHardest attacks are true information, selectively presented, at strategic moment. Election week, release true-but-damaging information. Cannot call lie. Can only provide context, and context loses to scandal.\n\nWhen you see 'Misleading' or 'Mostly True,' be extra careful. Adversary has done homework. Simple fact-check will not work. Need nuance, context, counter-narrative.",
+      "in_game": "Affects fact-checking effectiveness. 'False' claims are easier to debunk. 'Misleading' claims resist simple correction. 'True' claims cannot be fact-checked at all - only counter-narrative or context works.",
+      "mechanical_effects": {
+        "False": "Fact-check operates normally",
+        "Misleading": "-10% fact-check success, counter-narrative bonus",
+        "Mostly True": "-25% fact-check success, high backfire risk",
+        "True": "Fact-check unavailable or extreme backfire risk"
+      }
+    },
+
+    "emotional_resonance": {
+      "title": "Emotional Resonance",
+      "category": "Intelligence Metrics",
+      "short": "How viscerally the narrative hits.",
+      "filter_intro": "Facts do not spread. Feelings spread. This number tells you how strong the feeling is.",
+      "body": "Emotional Resonance measures a narrative's psychological impact and visceral appeal - how strongly it triggers emotional responses that drive sharing and belief.\n\nHigh emotional resonance narratives exploit:\n• Fear (especially for family, children, physical safety)\n• Anger (injustice, betrayal, humiliation)\n• Disgust (moral violation, contamination)\n• Tribal identity (us vs. them, in-group threat)\n\nThe problem: emotional arousal bypasses critical thinking. High-resonance narratives spread faster, embed deeper, and resist correction more stubbornly than low-resonance claims. The more outraged someone feels, the less likely they are to pause and verify.",
+      "filter_commentary": "Adversary knows: make people feel, they stop thinking. So every attack is designed for maximum feeling.\n\nChild in danger - everyone shares. Atrocity image - everyone reacts. Betrayal by trusted figure - rage overwhelms reason.\n\nThis is why pre-bunking works better than fact-checking. Fact-check arrives after emotion has already done damage. Pre-bunking teaches: 'When you feel very strong emotion, pause. That is when you are most vulnerable.'\n\nAlso why counter-narrative is important. Cannot fight emotion with facts. Must fight emotion with emotion. Different emotion, healthier emotion, but emotion.\n\nWhen you see high emotional resonance, know: facts alone will not win. Need story, need feeling, need human connection. Technical analysis does not beat crying child.",
+      "in_game": "Affects virality and correction resistance. High emotional resonance gives ignoring severe penalties and reduces fact-check effectiveness. Counter-narratives become more important.",
+      "mechanical_effects": {
+        "1-3": "Low emotion; fact-based approaches work well",
+        "4-6": "Moderate emotion; standard probabilities",
+        "7-8": "High emotion; fact-check penalty, counter-narrative bonus",
+        "9-10": "Extreme emotion; fact-check severely penalized, speed critical"
+      }
+    }
+  },
+
+  "threat_types": {
+    "scarcity_narrative": {
+      "title": "Scarcity Narratives",
+      "category": "Threat Types",
+      "short": "They're taking what's yours.",
+      "filter_intro": "Oldest trick in book. 'They are taking your food, your fuel, your jobs.' Works every time because fear of loss is very strong.",
+      "body": "Scarcity narratives weaponize competition anxiety by claiming an out-group is consuming resources that rightfully belong to the in-group. These are devastatingly effective because they exploit deep evolutionary psychology - resource competition is existentially threatening.\n\nCommon patterns:\n• Military forces depleting local supplies\n• Refugees taking jobs/housing/services\n• Elites hoarding while common people suffer\n• Foreign influence draining national wealth\n\nScarcity narratives succeed because:\n• Easy to understand (they take, you lose)\n• Impossible to completely disprove (some resource competition exists)\n• Trigger immediate anxiety and anger\n• Create ready villain and victim roles",
+      "filter_commentary": "In every NATO deployment, same narrative appears. 'Soldiers buying all the food.' 'Exercises damaging farms.' 'Fuel going to military while civilians wait in lines.'\n\nOften based on grain of truth - large military presence does affect local economy. But adversary exaggerates, fabricates, coordinates amplification.\n\nBest response: transparency and proactive positive messaging. Show exactly what resources are used. Show compensation, local purchasing, community support. Turn narrative: 'NATO presence brings economic benefit.'\n\nAlso pre-bunk: 'You will hear stories about resource shortages. Here is how to verify. Here is who to contact with real concerns.'\n\nScarcity narratives are predictable. No excuse not to be ready.",
+      "typical_response_effectiveness": {
+        "fact_check": "Effective if claims are fabricated; difficult if partially true",
+        "pre_bunk": "Very effective - warn about scarcity tactics before they appear",
+        "counter_narrative": "Effective - show benefits of presence",
+        "discredit_source": "Moderate - depends on source visibility",
+        "ignore": "Rarely works - scarcity fears are too primal"
+      }
+    },
+
+    "deepfake": {
+      "title": "Deepfakes",
+      "category": "Threat Types",
+      "short": "Seeing is no longer believing.",
+      "filter_intro": "Now adversary can make video of anyone saying anything. Technology we feared for years is here. Changes everything.",
+      "body": "Deepfakes use artificial intelligence to create synthetic media - typically video or audio - that depicts real people saying or doing things they never did. This technology undermines the evidentiary value of video, historically considered reliable proof.\n\nDeepfake threats:\n• Fabricated confessions or admissions from leaders\n• Fake evidence of atrocities or misconduct\n• Synthetic compromising material for blackmail\n• Plausible deniability for real footage ('that's a deepfake')\n\nThe last point is often overlooked: deepfakes create doubt in both directions. Real footage can be dismissed as fake. This 'liar's dividend' may be more damaging than specific fabrications.",
+      "filter_commentary": "First deepfake attack we studied: adversary created video of Baltic leader saying something foolish. Not even good fake - analysis showed obvious artifacts. But damage was done in first hours before analysis completed.\n\nNow technology is better. Artifacts are subtle. Need expert analysis, need time. But narrative does not wait for analysis.\n\nBest defense is pre-bunking. Teach audiences: 'Deepfakes exist. When you see shocking video, wait. Check other sources. Ask if this is verified.' Create culture of skepticism.\n\nAlso need rapid forensic capability. When fake appears, must be able to analyze and publish debunking within hours, not days. Technical analysis plus clear public communication.\n\nAnd must prepare for liar's dividend. When adversary does something real, they will claim deepfake. Need authenticated channels, verified records, so real events cannot be dismissed.",
+      "typical_response_effectiveness": {
+        "fact_check_basic": "Limited - too technical for simple debunking",
+        "fact_check_thorough": "Essential - forensic analysis required",
+        "pre_bunk": "Most effective - teach deepfake recognition before attack",
+        "counter_narrative": "Supportive role only",
+        "discredit_source": "Moderate if origin can be traced",
+        "ignore": "Never - high damage potential demands response"
+      }
+    },
+
+    "alliance_fracture": {
+      "title": "Alliance Fracture",
+      "category": "Threat Types",
+      "short": "Divide and conquer, information age style.",
+      "filter_intro": "Adversary cannot defeat NATO in battle. So adversary tries to make NATO defeat itself. Division is cheaper than divisions.",
+      "body": "Alliance fracture narratives aim to undermine coalition cohesion by exploiting real or fabricated tensions between allies. The strategic goal is clear: a unified alliance is strong; a fractured alliance is vulnerable.\n\nCommon tactics:\n• Leaked 'private communications' showing ally criticism\n• Amplifying genuine policy disagreements\n• Fabricated insider reports of secret deals or betrayals\n• Historical grievance activation\n• 'Burden sharing' resentment narratives\n\nThese narratives succeed because:\n• Alliances do have internal tensions (grain of truth)\n• Citizens often skeptical of foreign entanglements\n• Nationalism easily triggered\n• Difficult to prove universal allied harmony",
+      "filter_commentary": "Classic Russian playbook. Used against NATO for decades. 'Americans do not really care about Europe.' 'Europeans are free-riding on American protection.' 'Baltic states are provoking conflict for own interests.' All designed to make alliance question itself.\n\nAlso used within countries. 'Your government is puppet of foreign power.' 'Your leaders care more about allies than own citizens.' Sovereignty anxiety is powerful.\n\nBest response: visible unity. Joint statements, coordinated messaging, leaders appearing together. Actions speak louder than denials. When adversary says 'alliance is divided,' show alliance is united.\n\nAlso important: do not pretend disagreements don't exist. Adversary will find real tensions and exploit them. Better to acknowledge: 'Allies sometimes disagree. That is normal. But we remain committed to common defense.' Authentic unity is stronger than fake harmony.",
+      "typical_response_effectiveness": {
+        "fact_check": "Useful for fake documents; limited for real tensions",
+        "pre_bunk": "Effective - warn about division tactics",
+        "counter_narrative": "Most effective - demonstrate unity through action",
+        "discredit_source": "Moderate - state media attribution can help",
+        "ignore": "Risky - lets doubt fester"
+      }
+    },
+
+    "environmental_damage": {
+      "title": "Environmental Manipulation",
+      "category": "Threat Types",
+      "short": "Framing military presence as ecological disaster.",
+      "filter_intro": "Environment is emotional issue. Good for adversary. Combine military distrust with environmental fear. Very effective combination.",
+      "body": "Environmental damage narratives accuse military forces of causing ecological harm - pollution, habitat destruction, contamination. These are particularly effective because:\n\n• Environmental concern crosses political lines\n• Military activities do have environmental footprint (grain of truth)\n• Visual 'evidence' (real or fabricated) is compelling\n• Taps into broader anxieties about institutional accountability\n• Creates unusual coalition of opponents",
+      "filter_commentary": "We see this pattern everywhere NATO operates. 'Exercises are destroying protected land.' 'Military vehicles contaminating water supply.' 'Secret pollution being covered up.'\n\nDifficult because often there is some truth. Large military presence does have environmental impact. Adversary takes small truth, exaggerates hugely, adds fabricated evidence, creates outrage.\n\nWorse: if we dismiss all environmental concerns, we look like we don't care about environment. Lose either way.\n\nBest approach: radical transparency. Publish environmental protocols. Invite inspections. When incidents happen (they will), report first before adversary can spin. Show genuine commitment to environmental protection.\n\nCounter-narrative is essential: 'NATO takes environment seriously. Here are our protections, here is our record, here is how to report concerns.' Turn adversary attack into demonstration of responsibility.",
+      "typical_response_effectiveness": {
+        "fact_check": "Effective for fabricated evidence; careful with real issues",
+        "pre_bunk": "Effective - establish environmental commitment proactively",
+        "counter_narrative": "Most effective - transparency and positive record",
+        "discredit_source": "Risky - looks like dismissing legitimate concerns",
+        "ignore": "Dangerous - environmental concern is persistent"
+      }
+    },
+
+    "conspiracy_theory": {
+      "title": "Conspiracy Theories",
+      "category": "Threat Types",
+      "short": "When the theory is immune to evidence.",
+      "filter_intro": "Normal lies can be debunked with facts. Conspiracy theories eat facts for breakfast. Different problem requires different approach.",
+      "body": "Conspiracy theories are self-sealing belief systems where evidence against the conspiracy is interpreted as evidence of its power and reach. This makes them uniquely resistant to correction.\n\nConspiracy theories succeed because they:\n• Provide simple explanations for complex events\n• Offer sense of special knowledge (in-group identity)\n• Give meaning to randomness and uncertainty\n• Identify clear villains to blame\n• Cannot be disproven (unfalsifiable by design)\n\nThe paradox: engaging with conspiracy theories often strengthens them. Denials prove 'they' are worried. Evidence is fabricated. Experts are compromised. Every response feeds the narrative.",
+      "filter_commentary": "Most difficult threat type. Have studied for years, still no good solutions.\n\nFact-checking does not work - believers dismiss evidence. Aggressive debunking does not work - creates martyrs. Ignoring does not work - allows unchecked spread.\n\nWhat works (somewhat):\n• Pre-bunking - teach conspiracy recognition before exposure\n• Transparency - remove information vacuums where conspiracies grow\n• Address underlying needs - what fear or grievance feeds belief?\n• Trusted messengers - former believers, community leaders\n• Patience - deradicalization is slow\n\nConspiracy theories often have low bot amplification because believers are genuinely passionate. This makes them organic, persistent, and very hard to counter.\n\nMost important: do not create conspiracy theories through own actions. Excessive secrecy, contradictory statements, obvious cover-ups - these feed conspiracy thinking more than any adversary operation.",
+      "typical_response_effectiveness": {
+        "fact_check": "Low effectiveness - evidence is dismissed",
+        "pre_bunk": "Most effective - inoculate before infection",
+        "counter_narrative": "Moderate - address underlying fears",
+        "discredit_source": "Often backfires - creates martyrs",
+        "ignore": "Very risky - organic spread continues"
+      }
+    },
+
+    "civilian_harm": {
+      "title": "Civilian Harm Claims",
+      "category": "Threat Types",
+      "short": "The highest stakes accusation.",
+      "filter_intro": "Nothing moves faster than atrocity claim. Nothing does more damage. And nothing is harder to recover from if you respond wrong.",
+      "body": "Civilian harm claims - accusations that military forces have killed, injured, or harmed non-combatants - represent the highest-stakes information warfare. These narratives:\n\n• Generate maximum emotional response\n• Create immediate international pressure\n• Can influence rules of engagement and operational freedom\n• Persist in collective memory for decades\n• May trigger official investigations regardless of truth\n\nCivilian harm claims are weaponized through:\n• Fabricated incidents with staged or manipulated imagery\n• Real incidents exaggerated or decontextualized\n• Attribution of adversary actions to friendly forces\n• Resurrection of old incidents presented as new",
+      "filter_commentary": "This is final test. Everything you learned applies here at maximum intensity.\n\nWhen adversary claims civilian harm, clock is ticking. Every hour without response is hour of unchallenged accusation. But wrong response makes everything worse.\n\nMust have: rapid verification capability, pre-authorized statements, clear chain of command for information release. Cannot wait for committee meeting when atrocity accusation is trending.\n\nMust not have: defensive tone, dismissive language, attack on accusers when evidence is unclear. These make you look guilty.\n\nPre-bunking is essential: 'Adversary will make false atrocity claims. Here is how we verify incidents. Here is how we investigate complaints. Here is our record.' When specific claim comes, can refer to established credibility.\n\nAnd if incident is real? Immediate acknowledgment, investigation, accountability. Trying to hide real harm is catastrophic - when truth comes out (and it will), credibility is destroyed. Better to report own mistakes than have adversary reveal them.",
+      "typical_response_effectiveness": {
+        "fact_check": "Essential if claim is false - speed critical",
+        "pre_bunk": "Most valuable - establish credibility before crisis",
+        "counter_narrative": "Risky - can appear to deflect from serious accusation",
+        "discredit_source": "Risky - looks defensive when people 'died'",
+        "ignore": "Never - silence is interpreted as admission"
+      }
+    }
+  },
+
+  "mechanics": {
+    "manpower_economy": {
+      "title": "Manpower Economy",
+      "category": "Mechanics",
+      "short": "You cannot respond to everything.",
+      "filter_intro": "In real operations, resources are always limited. Time, people, attention - never enough. Game reflects this.",
+      "body": "Manpower represents your team's finite capacity to respond to information threats. Every response consumes resources that cannot be used elsewhere.\n\nThis abstraction captures real-world constraints:\n• Staff hours for research, writing, coordination\n• Leadership attention and decision-making bandwidth\n• Platform/media access and relationships\n• Credibility capital (overuse diminishes impact)\n\nResource scarcity forces prioritization. You cannot respond to every threat at maximum intensity. Sometimes the right choice is a minimal response to conserve resources for larger battles.",
+      "filter_commentary": "Western organizations often think they can 'surge' information operations when needed. Wrong. Capability takes time to build. Relationships, skills, trusted voices - cannot create overnight.\n\nIn Baltic information agencies, we run lean always. Every operation, ask: 'Is this worth the resources? What are we not doing if we do this?'\n\nGame teaches this discipline. Unlimited resources would teach wrong lesson. Real cognitive warfare is about allocation, prioritization, strategic patience.",
+      "in_game": "Each response costs Manpower. Total available per round is limited. Overspending early leaves you vulnerable later. Underspending on critical threats causes meter damage. Balance is essential."
+    },
+
+    "meter_dynamics": {
+      "title": "Meter Dynamics",
+      "category": "Mechanics",
+      "short": "Measuring the unmeasurable.",
+      "filter_intro": "Information environment is not like temperature - cannot put thermometer in. But can estimate direction, trend. Meter does this.",
+      "body": "The Information Environment Meter represents societal cohesion and trust - abstract concepts that resist precise measurement but are undeniably real.\n\nThe meter is not measuring:\n• Whether specific facts are believed\n• Approval ratings of NATO\n• Social media sentiment\n\nThe meter is measuring:\n• Aggregate resilience to manipulation\n• Social trust and institutional confidence\n• Capacity for collective sense-making\n• Distance from dangerous fragmentation\n\nMovement toward fragmentation means society is losing shared reality. Movement toward unity means shared understanding is strengthening.",
+      "filter_commentary": "In real operations, we track many indicators. Media analysis, social listening, polling, focus groups. None give complete picture. All together give sense of direction.\n\nMeter is simplification, yes. Real information environment is complex. But simplification teaches core lesson: actions have consequences, environment can move, direction matters more than position.\n\nNeutral is not safe. Neutral is unstable equilibrium. Small push either direction changes trajectory. This is how real information environments work - stable until they're not.",
+      "in_game": "Meter starts at neutral (0). Ranges from -10 (fragmentation/failure) to +10 (unity/success). Each round's outcome shifts meter based on response effectiveness. Final position determines mission outcome."
+    },
+
+    "response_synergies": {
+      "title": "Response Synergies",
+      "category": "Mechanics",
+      "short": "Sometimes combined arms beats single weapon.",
+      "filter_intro": "One response is simple. Multiple responses together - now you have strategy. But also complexity, cost, risk of inefficiency.",
+      "body": "Combining multiple responses in a single round can create synergies or inefficiencies:\n\nPositive Synergies:\n• Pre-bunk + Fact-check: Audiences primed to trust your correction\n• Fact-check + Counter-narrative: Address the lie while offering better story\n• Counter-narrative + Transparency actions: Show, don't just tell\n\nNegative Synergies (Inefficiencies):\n• Multiple fact-checks on same claim: Redundant, wasteful\n• Discredit source + other responses: Can undermine credibility of your facts\n• Ignore + any response: Contradictory signals",
+      "filter_commentary": "Real campaigns use combined approaches. Never just one response. But combination must be coherent, mutually reinforcing.\n\nSeen operations fail because every department wanted to respond their way. Press office does fact-check, strategic comms does counter-narrative, commander makes separate statement. Three messages, no coherence, adversary exploits gaps.\n\nCoordination is force multiplier. Incoordination is vulnerability. Game rewards thinking about how pieces fit together.",
+      "in_game": "Certain response combinations provide bonuses or penalties. Pre-bunk synergizes with fact-checking in future rounds. Counter-narrative synergizes with fact-check in same round. Ignore cannot combine with other responses - it represents deliberate inaction."
+    },
+
+    "timing_windows": {
+      "title": "Timing Windows",
+      "category": "Mechanics",
+      "short": "The right response at the wrong time is the wrong response.",
+      "filter_intro": "Speed matters. But what kind of speed? Hours Active tells you where in narrative lifecycle you are. This determines what is possible.",
+      "body": "Timing windows represent the reality that optimal response strategies change as narratives mature:\n\nEarly Window (0-12 hours):\n• Fact-checking most effective\n• Quick response can prevent hardening\n• Pre-bunking less relevant (too late for this narrative)\n• Speed is premium\n\nMiddle Window (12-48 hours):\n• Fact-checking still viable\n• Counter-narratives become more important\n• Thorough responses have time to develop\n• Balance of speed and depth\n\nLate Window (48+ hours):\n• Fact-checking effectiveness declining\n• Counter-narratives essential\n• Pre-bunk payoff (if invested earlier)\n• Fighting memory, not misinformation",
+      "filter_commentary": "Cannot change timing. Can only recognize it and adapt.\n\nEarly: move fast, accept imperfection. Something out quickly beats perfect out slowly.\n\nLate: do not pretend narrative is fresh. Different approach needed. Counter-story, not correction. Address why people believed, not just what they believed.\n\nWorst mistake: using early-window tactics in late-window situation. Looks out of touch. 'They are finally responding, must be rattled.' Adversary loves this.",
+      "in_game": "Hours Active determines which timing window applies. Response effectiveness modifiers shift based on window. Scenarios with high Hours Active punish fact-check-only strategies and reward prior pre-bunking investment."
+    }
+  }
+}

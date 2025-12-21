@@ -1,0 +1,33 @@
+/* src/components/game/ManpowerDisplay.module.css */
+.container {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  background: rgba(0, 51, 102, 0.3);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--nato-blue);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  color: var(--cyan-400);
+}
+
+.label {
+  font-size: 0.875rem;
+  color: var(--gray-400);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.value {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--cyan-400);
+}
+
+.low {
+  color: var(--red-400);
+}

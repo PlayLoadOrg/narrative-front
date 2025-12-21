@@ -1,0 +1,73 @@
+/* src/components/game/MeterDisplay.module.css */
+.container {
+  width: 100%;
+  max-width: 48rem;
+  margin: 0 auto var(--spacing-lg);
+}
+
+.bar {
+  position: relative;
+  height: 3rem;
+  background: var(--gray-800);
+  border-radius: var(--radius-full);
+  border: 3px solid var(--gray-700);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  margin-bottom: var(--spacing-sm);
+}
+
+.fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(to right, var(--red-600), var(--gray-600) 50%, var(--cyan-400));
+  opacity: 0.8;
+}
+
+.marker {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: white;
+  box-shadow: 0 0 10px white;
+  transition: left var(--transition-slow);
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.orb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1rem;
+  height: 1rem;
+  background: white;
+  border-radius: var(--radius-full);
+  box-shadow: 0 0 15px 2px white;
+  border: 2px solid var(--gray-800);
+}
+
+.labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.fragmentation { color: var(--red-400); }
+.neutral { color: var(--gray-400); }
+.unity { color: var(--cyan-400); }
+
+.value {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  margin-top: var(--spacing-sm);
+}

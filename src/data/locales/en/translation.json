@@ -1,0 +1,178 @@
+{
+  "start": {
+    "title": "NARRATIVE FRONT",
+    "presenter": "PLAYLOAD.ORG",
+    "credits": "High Calibur Games",
+    "disclaimer": "In this simulation, you will engage in the battlespace of human perception. All events, organizations, and individuals are products of creative writing for educational purposes. Any resemblance to actual events or persons is coincidental. Classification: UNCLASSIFIED",
+    "affirmButton": "Affirmative, I'm ready."
+  },
+  "briefing": {
+    "quote": "Supreme excellence consists of breaking the enemy's resistance without fighting.",
+    "attribution": "— Sun Tzu, The Art of War",
+    "text": "You are the Strategic Communications Coordinator for a NATO peacekeeping mission in a fictional Eastern European nation recovering from civil conflict.\n\nYour objective: Maintain public trust and social cohesion in the face of coordinated disinformation campaigns designed to undermine the peacekeeping mission and reignite sectarian tensions.\n\nYou have limited manpower. Every response costs resources. Choose wisely.\n\nYour decisions will shift the Information Environment Meter between fragmentation and unity. Let it drift too far toward fragmentation, and the mission fails. Keep it stable or trending toward unity, and you succeed.\n\nThere are no perfect answers. Only informed decisions under pressure.",
+    "beginButton": "Begin Mission"
+  },
+  "settings": {
+    "title": "Settings",
+    "muteButton": "Toggle Sound",
+    "unmuteButton": "Sound On",
+    "soundToggle": "Sound",
+    "soundOn": "On",
+    "soundOff": "Off",
+    "saveGameButton": "Save Game",
+    "loadGameButton": "Load Game",
+    "saveSuccess": "Game saved successfully!",
+    "loadSuccess": "Game loaded successfully!",
+    "noSavedGame": "No saved game found."
+  },
+  "game": {
+    "appTitle": "NARRATIVE FRONT",
+    "appSubtitle": "Strategic Communications Coordinator",
+    "manpowerLabel": "Manpower",
+    "roundLabel": "Round",
+    "ofLabel": "of",
+    "adversaryInject": "ADVERSARY INJECT",
+    "tabScenario": "Scenario",
+    "tabComms": "Comms",
+    "tabDecision": "Decision",
+    "yourResponse": "Your Response",
+    "manpowerAllocated": "Manpower Allocated",
+    "confirmButton": "Confirm Response",
+    "commsTitle": "Communications - Tactical Advisor",
+    "commsPlaceholder": "Filter will provide guidance...",
+    "decisionTitle": "Decision Support"
+  },
+  "modeSelection": {
+    "title": "Select Mission Type",
+    "subtitle": "Choose your operational mode",
+    "deployButton": "Deploy Mission",
+    "comingSoon": "Coming Soon",
+    "classification": "UNCLASSIFIED",
+    "natoEE": {
+      "title": "NATO Eastern Europe",
+      "subtitle": "Scenario Mode",
+      "description": "Hand-crafted scenarios based on realistic disinformation tactics in peacekeeping operations. Includes tactical advisor guidance and learning-focused probability tables.",
+      "feature1": "6 realistic scenarios",
+      "feature2": "Filter tactical guidance",
+      "feature3": "Learning-focused design",
+      "feature4": "Tuned probability tables",
+      "difficulty": "Intermediate",
+      "duration": "15-20 minutes"
+    },
+    "infinite": {
+      "title": "Infinite Mode",
+      "subtitle": "Procedural Generation",
+      "description": "Endless procedurally generated scenarios with deck-building mechanics. Build your response arsenal over time and test your strategic communications skills against infinite variations.",
+      "feature1": "Endless scenarios",
+      "feature2": "Deck-building mechanics",
+      "feature3": "Progressive unlocks",
+      "feature4": "High replayability",
+      "difficulty": "Advanced",
+      "duration": "Endless"
+    },
+    "difficultyLabel": "Difficulty",
+    "durationLabel": "Duration"
+  },
+  "intelligence": {
+    "title": "Intelligence Assessment",
+    "threatLevelCritical": "CRITICAL THREAT",
+    "threatLevelHigh": "HIGH THREAT",
+    "threatLevelModerate": "MODERATE THREAT",
+    "hoursActiveLabel": "Hours Active",
+    "hoursActiveUnit": "hrs",
+    "hoursActiveDesc": "Duration this narrative has been circulating",
+    "botAmplificationLabel": "Bot Amplification",
+    "botAmplificationUnit": "%",
+    "botAmplificationDesc": "Estimated percentage of coordinated inauthentic activity",
+    "damageLabel": "Damage Potential",
+    "damagePotentialLabel": "Damage Potential",
+    "damagePotentialScale": "/10",
+    "damagePotentialDesc": "Potential impact if narrative goes unchecked",
+    "veracityLabel": "Veracity Assessment",
+    "veracityDesc": "Factual accuracy of the core claim",
+    "emotionalResonanceLabel": "Emotional Resonance",
+    "emotionalResonanceScale": "/10",
+    "emotionalResonanceDesc": "Psychological impact and visceral appeal",
+    "veracityTrue": "True",
+    "veracityMostlyTrue": "Mostly True",
+    "veracityMisleading": "Misleading",
+    "veracityFalse": "False"
+  },
+  "accessibility": {
+    "menuButton": "Open settings menu",
+    "closeMenu": "Close menu",
+    "closeButton": "Close",
+    "selectedResponse": "Selected response"
+  },
+  "responses": {
+    "ignore": {
+      "title": "Ignore",
+      "description": "Do not respond. Let the narrative circulate without official comment.",
+      "riskWarning": "Silence often amplifies disinformation."
+    },
+    "factCheckBasic": {
+      "title": "Fact-Check (Basic)",
+      "description": "Issue a rapid fact-check addressing the false claim with verifiable evidence."
+    },
+    "factCheckThorough": {
+      "title": "Fact-Check (Thorough)",
+      "description": "Deploy comprehensive fact-checking with technical analysis and expert verification."
+    },
+    "preBunk": {
+      "title": "Pre-Bunk",
+      "description": "Inoculate audiences against future similar claims by explaining manipulation tactics.",
+      "riskWarning": "Pre-bunking is proactive - benefits appear in later rounds."
+    },
+    "counterNarrative": {
+      "title": "Counter-Narrative",
+      "description": "Offer an alternative, positive narrative that addresses underlying fears or grievances."
+    },
+    "discreditSource": {
+      "title": "Discredit Source",
+      "description": "Publicly expose the source as unreliable or malicious.",
+      "riskWarning": "Can backfire if evidence is weak or source has sympathizers."
+    },
+    "upgradeToThorough": "Upgrade to Thorough",
+    "costLabel": "Cost",
+    "manpowerUnits": "MP",
+    "selected": "Selected",
+    "insufficientManpower": "Insufficient manpower for this combination.",
+    "noResponseSelected": "Ignore (No Response)"
+  },
+  "filter": {
+    "emptyState": "Filter will provide tactical guidance as scenarios develop."
+  },
+  "ui": {
+    "loading": "Loading...",
+    "continue": "Continue"
+  },
+  "meter": {
+    "label": "Information Environment",
+    "neutralLabel": "NEUTRAL",
+    "unityLabel": "UNITY",
+    "fragmentationLabel": "FRAGMENTATION",
+    "fragmentation": "FRAGMENTATION",
+    "neutral": "NEUTRAL",
+    "unity": "UNITY",
+    "currentValue": "Current: "
+  },
+  "outcome": {
+    "title": "Outcome",
+    "analysis": "Tactical Analysis",
+    "meterImpact": "Meter Impact",
+    "manpowerSpent": "Manpower Spent",
+    "continueButton": "Continue to Next Round"
+  },
+  "end": {
+    "victoryTitle": "MISSION SUCCESS",
+    "victoryMessage": "The information environment remained stable. Public trust held firm, adversary narratives were neutralized, and the peacekeeping mission proceeded unimpeded. This is strategic victory.",
+    "defeatTitle": "MISSION FAILURE",
+    "defeatMessage": "The information environment collapsed. Disinformation fractured public support, sowed chaos, and undermined the peacekeeping mission before kinetic operations were even necessary. This is cognitive defeat.",
+    "neutralTitle": "FRAGILE STABILITY",
+    "neutralMessage": "The information environment weathered the storm but remains volatile. Adversary narratives gained some traction, but catastrophic failure was avoided. Vigilance must continue.",
+    "finalMeterLabel": "Final Meter",
+    "finalManpowerLabel": "Remaining Manpower",
+    "scenariosCompletedLabel": "Scenarios Completed",
+    "playAgainButton": "New Mission"
+  }
+}

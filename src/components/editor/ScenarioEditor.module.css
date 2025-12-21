@@ -1,0 +1,93 @@
+/* src/components/editor/ScenarioEditor.module.css */
+.container {
+  background: rgba(0, 51, 102, 0.1);
+  border: 2px solid var(--nato-blue);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  margin-bottom: var(--spacing-lg);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 2px solid var(--midnight-border);
+}
+
+.title {
+  font-size: 1.5rem;
+  color: var(--cyan-400);
+  margin: 0;
+}
+
+.section {
+  margin-top: var(--spacing-xl);
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--midnight-border);
+}
+
+.sectionTitle {
+  font-size: 1.125rem;
+  color: var(--cyan-300);
+  margin-bottom: var(--spacing-md);
+}
+
+.field {
+  margin-bottom: var(--spacing-lg);
+}
+
+.label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--gray-300);
+  margin-bottom: var(--spacing-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.input,
+.inputSmall,
+.select,
+.textarea {
+  width: 100%;
+  padding: var(--spacing-md);
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--gray-700);
+  border-radius: var(--radius-md);
+  color: white;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all var(--transition-fast);
+}
+
+.input:focus,
+.inputSmall:focus,
+.select:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--cyan-400);
+  box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.1);
+}
+
+.inputSmall {
+  width: 120px;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 80px;
+  line-height: 1.6;
+}
+
+.select {
+  cursor: pointer;
+}
+
+.outcomeGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--spacing-md);
+}

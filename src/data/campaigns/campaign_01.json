@@ -1,0 +1,222 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "title": "Operation: Broken Mirror",
+    "description": "A 6-round cognitive warfare campaign focusing on resource allocation and intelligence analysis."
+  },
+  "mechanics": {
+    "manpower": {
+      "starting": 10,
+      "perRound": 10,
+      "maximum": 10
+    },
+    "costs": {
+      "anticipation_card": 5,
+      "reaction_low": 2,
+      "reaction_med": 3,
+      "reaction_high": 4
+    }
+  },
+  "scenarios": [
+    {
+      "id": "1",
+      "round": 1,
+      "inject": {
+        "primary": {
+          "theme": "scarcity",
+          "text": "Rumors spread on social media that peacekeeping troops are buying up fuel from local stations, causing shortages and price spikes for civilians.",
+          "intelligence": {
+            "hoursActive": 8,
+            "botAmplification": 35,
+            "damagePotential": 5,
+            "veracity": "False",
+            "emotionalResonance": 7,
+            "sourceType": "local_organic"
+          }
+        },
+        "pivotThreshold": 0.35
+      },
+      "filter": {
+        "briefing": {
+          "preInject": "First contact. Monitoring stations are picking up a baseline shift in local sentiment regarding resources.",
+          "assessment": "Scarcity narrative detected. It is currently low-level rumors, but these grow like weeds if ignored. Note the low bot activity—this is spreading organically among real people."
+        },
+        "anticipationGuidance": {
+          "text": "Adversary is testing our logistics footprint. Expect them to push Scarcity narratives to see if we react.",
+          "hintPrimary": "scarcity",
+          "hintSecondary": null
+        }
+      },
+      "outcomes": {
+        "meterImpact": { "success": 2, "neutral": 0, "failure": -2 }
+      }
+    },
+    {
+      "id": "2",
+      "round": 2,
+      "inject": {
+        "primary": {
+          "theme": "atrocity",
+          "text": "A video circulates showing what appears to be peacekeeping vehicles near the scene of a house fire. Adversary-aligned accounts claim troops started the fire during a 'raid' and blocked firefighters.",
+          "intelligence": {
+            "hoursActive": 4,
+            "botAmplification": 85,
+            "damagePotential": 8,
+            "veracity": "False",
+            "emotionalResonance": 9,
+            "sourceType": "bot_network"
+          }
+        },
+        "pivotThreshold": 0.30
+      },
+      "filter": {
+        "briefing": {
+          "preInject": "Alert. Significant spike in coordinated network traffic. Automated accounts are activating across all sectors.",
+          "assessment": "Atrocity narrative incoming. Unlike the fuel rumors, this is artificial. Look at that Bot Amplification score (85%). This is a manufactured crisis designed to trigger an emotional response."
+        },
+        "anticipationGuidance": {
+          "text": "They are moving to 'Harm' narratives. If they can make the population fear us, they win. Atrocity is the likely vector.",
+          "hintPrimary": "atrocity",
+          "hintSecondary": "betrayal"
+        }
+      },
+      "outcomes": {
+        "meterImpact": { "success": 3, "neutral": -1, "failure": -4 }
+      }
+    },
+    {
+      "id": "3",
+      "round": 3,
+      "inject": {
+        "primary": {
+          "theme": "conspiracy",
+          "text": "A theory gains traction claiming the peacekeeping exercise is cover for installing surveillance infrastructure. 'Leaked' documents show supposed equipment manifests with monitoring devices.",
+          "intelligence": {
+            "hoursActive": 36,
+            "botAmplification": 22,
+            "damagePotential": 7,
+            "veracity": "False",
+            "emotionalResonance": 6,
+            "sourceType": "local_organic"
+          }
+        },
+        "pivotThreshold": 0.25
+      },
+      "filter": {
+        "briefing": {
+          "preInject": "We missed something. While we dealt with the fire rumors, a quieter narrative has been hardening in the background.",
+          "assessment": "Conspiracy theory. It has been active for 36 hours already. It is deeply entrenched in local forums. Low bot count means these are 'true believers'. Fact-checking now will be difficult; they have had time to build their own 'evidence'."
+        },
+        "anticipationGuidance": {
+          "text": "They are shifting tactics. Conspiracy theories are used to erode institutional trust. They want people to question our motives.",
+          "hintPrimary": "conspiracy",
+          "hintSecondary": "incompetence"
+        }
+      },
+      "outcomes": {
+        "meterImpact": { "success": 2, "neutral": 0, "failure": -3 }
+      }
+    },
+    {
+      "id": "4",
+      "round": 4,
+      "inject": {
+        "primary": {
+          "theme": "scarcity",
+          "text": "COORDINATED ATTACK: Multiple sources report forces have 'seized' hospital generator fuel. Images show elderly patients in dark wards.",
+          "intelligence": {
+            "hoursActive": 2,
+            "botAmplification": 78,
+            "damagePotential": 10,
+            "veracity": "False",
+            "emotionalResonance": 10,
+            "sourceType": "state_media"
+          }
+        },
+        "compound": true,
+        "secondaryThemes": ["atrocity"],
+        "pivotThreshold": 0
+      },
+      "filter": {
+        "briefing": {
+          "preInject": "Massive signal flare. All indicators red. This is their Main Effort.",
+          "assessment": "Compound Attack: Scarcity + Atrocity. 'Troops stealing fuel' (Scarcity) causing 'Patients to die' (Atrocity). Note the source: State Media proxies are driving this directly. High coordination, maximum emotional impact."
+        },
+        "anticipationGuidance": {
+          "text": "We are approaching the campaign mid-point. Expect them to combine vectors for maximum damage. A Compound Attack is likely.",
+          "hintPrimary": "scarcity",
+          "hintSecondary": "atrocity"
+        }
+      },
+      "outcomes": {
+        "meterImpact": { "success": 4, "neutral": -2, "failure": -5 }
+      }
+    },
+    {
+      "id": "5",
+      "round": 5,
+      "inject": {
+        "primary": {
+          "theme": "betrayal",
+          "text": "Following the hospital incident, 'leaked' diplomatic cables show host nation officials privately expressing 'deep concerns' about the mission. Opposition politicians demand inquiry.",
+          "intelligence": {
+            "hoursActive": 18,
+            "botAmplification": 48,
+            "damagePotential": 8,
+            "veracity": "Misleading",
+            "emotionalResonance": 7,
+            "sourceType": "state_media"
+          }
+        },
+        "pivotThreshold": 0.35
+      },
+      "filter": {
+        "briefing": {
+          "preInject": "The kinetic phase is over. Now begins the political warfare.",
+          "assessment": "Betrayal narrative. They are using the chaos from the hospital story to fracture our alliance with the host nation. The cables are likely real but decontextualized ('Misleading' veracity). Be careful calling them 'Fake'."
+        },
+        "anticipationGuidance": {
+          "text": "After a major attack, they will try to exploit the political fallout. Expect Betrayal narratives targeting our alliance.",
+          "hintPrimary": "betrayal",
+          "hintSecondary": "conspiracy"
+        }
+      },
+      "outcomes": {
+        "meterImpact": { "success": 2, "neutral": 0, "failure": -3 }
+      }
+    },
+    {
+      "id": "6",
+      "round": 6,
+      "inject": {
+        "primary": {
+          "theme": "atrocity",
+          "text": "BREAKING: Graphic video shows aftermath of traffic incident involving peacekeeping convoy. Local woman critically injured. Hashtag trending.",
+          "intelligence": {
+            "hoursActive": 1,
+            "botAmplification": 85,
+            "damagePotential": 10,
+            "veracity": "Misleading",
+            "emotionalResonance": 10,
+            "sourceType": "bot_network"
+          }
+        },
+        "pivotThreshold": 0.20
+      },
+      "filter": {
+        "briefing": {
+          "preInject": "Final phase. They are throwing everything they have left at us.",
+          "assessment": "The incident might be real ('Misleading' veracity), but the narrative is manufactured. High Bot Amplification driving a 'Misleading' story is the deadliest combination. Logic will not work here. Only speed and values."
+        },
+        "anticipationGuidance": {
+          "text": "Endgame. They will try to define the mission's legacy with a final emotional blow. Atrocity is the standard closer.",
+          "hintPrimary": "atrocity",
+          "hintSecondary": "incompetence"
+        }
+      },
+      "outcomes": {
+        "meterImpact": { "success": 3, "neutral": -1, "failure": -4 }
+      }
+    }
+  ]
+}

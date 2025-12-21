@@ -1,0 +1,128 @@
+/* src/screens/OutcomeScreen.module.css */
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.card {
+  max-width: 48rem;
+  width: 100%;
+  background: rgba(26, 35, 50, 0.98);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  border: 1px solid var(--midnight-border);
+  box-shadow: var(--shadow-xl);
+  animation: slideUp var(--transition-normal);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.title {
+  font-size: 1.5rem;
+  color: var(--cyan-400);
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.narratives {
+  margin-bottom: var(--spacing-xl);
+}
+
+.sectionTitle {
+  font-size: 0.875rem;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--spacing-md);
+  font-weight: 700;
+}
+
+.narrative {
+  display: flex;
+  gap: var(--spacing-sm);
+  align-items: flex-start;
+  padding: var(--spacing-md);
+  background: rgba(0, 0, 0, 0.2);
+  border-left: 3px solid var(--cyan-400);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--spacing-sm);
+}
+
+.narrativeIcon {
+  color: var(--cyan-400);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.narrativeText {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--gray-200);
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-md);
+  margin: var(--spacing-lg) 0;
+  padding: var(--spacing-lg);
+  background: rgba(0, 51, 102, 0.1);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--nato-blue);
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.statIcon {
+  flex-shrink: 0;
+  color: var(--cyan-400);
+}
+
+.statDetails {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.statLabel {
+  font-size: 0.875rem;
+  color: var(--gray-400);
+}
+
+.statValue {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--gray-100);
+}
+
+.statValue.positive {
+  color: var(--green-400);
+}
+
+.statValue.negative {
+  color: var(--red-400);
+}

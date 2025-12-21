@@ -1,0 +1,90 @@
+{
+  "IGNORE": {
+    "success": [
+      { "shift": 1, "text": "The narrative failed to gain traction organically. Your silence prevented amplification through official response." }
+    ],
+    "neutral": [
+      { "shift": 0, "text": "The narrative spread moderately but caused no immediate damage to public trust." }
+    ],
+    "failure": [
+      { "shift": -2, "text": "Your silence was interpreted as tacit admission. The narrative hardened unchallenged." },
+      { "shift": -3, "text": "Without official response, the disinformation metastasized across multiple platforms." }
+    ]
+  },
+  "FACT_CHECK": {
+    "success": [
+      { "shift": 2, "text": "Your fact-check reached key audiences before the narrative hardened. Trust stabilized." },
+      { "shift": 2, "text": "Clear evidence and rapid deployment neutralized the false claim effectively." }
+    ],
+    "neutral": [
+      { "shift": 0, "text": "Your fact-check was acknowledged but failed to penetrate existing belief structures." },
+      { "shift": 0, "text": "The correction reached some audiences but others dismissed it as defensive." }
+    ],
+    "failure": [
+      { "shift": -1, "text": "Your fact-check arrived too late. The narrative had already embedded in collective memory." },
+      { "shift": -2, "text": "Aggressive fact-checking backfired, appearing defensive and triggering reactance." }
+    ]
+  },
+  "PRE_BUNK": {
+    "success": [
+      { "shift": 1, "text": "Inoculation messaging created skepticism toward manipulation tactics. Future defenses strengthened." }
+    ],
+    "neutral": [
+      { "shift": 0, "text": "Pre-bunking had limited immediate impact but may pay dividends in future rounds." }
+    ],
+    "failure": [
+      { "shift": 0, "text": "Your pre-bunking was too vague to create meaningful resistance." }
+    ]
+  },
+  "COUNTER_NARRATIVE": {
+    "success": [
+      { "shift": 2, "text": "Your alternative narrative resonated emotionally, offering hope and connection where fear had taken root." },
+      { "shift": 2, "text": "The counter-narrative addressed underlying grievances authentically. Trust shifted positively." }
+    ],
+    "neutral": [
+      { "shift": 0, "text": "Your counter-narrative reached sympathetic audiences but failed to convert skeptics." },
+      { "shift": 0, "text": "The alternative story was well-crafted but lacked the visceral punch of the adversary's claim." }
+    ],
+    "failure": [
+      { "shift": -1, "text": "Your counter-narrative appeared evasive, as if changing the subject rather than addressing concerns." },
+      { "shift": -2, "text": "Offering positive messaging while serious accusations lingered made you appear tone-deaf." }
+    ]
+  },
+  "DISCREDIT_SOURCE": {
+    "success": [
+      { "shift": 3, "text": "Exposing the source's state affiliation and funding destroyed its credibility. The narrative collapsed." },
+      { "shift": 2, "text": "Your source attribution was devastating. Audiences recognized the manipulation immediately." }
+    ],
+    "neutral": [
+      { "shift": 0, "text": "Source discrediting had mixed results. Some audiences were persuaded, others saw it as deflection." }
+    ],
+    "failure": [
+      { "shift": -2, "text": "Your attack on the source backfired badly. The messenger became a martyr for 'truth-telling.'" },
+      { "shift": -3, "text": "Aggressive source discrediting triggered the Streisand Effect. Visibility skyrocketed." }
+    ]
+  },
+  "COMBINED": {
+    "SYNERGY_PREBUNK_FACTCHECK": {
+      "bonus": "Your prior inoculation efforts primed audiences to trust your fact-check. Synergy achieved."
+    },
+    "SYNERGY_COUNTER_FACTCHECK": {
+      "bonus": "Pairing correction with a positive alternative narrative created both clarity and hope."
+    },
+    "SYNERGY_FACTCHECK_DISCREDIT": {
+      "bonus": "Fact-checking the content while exposing the source created a comprehensive response."
+    },
+    "INEFFICIENCY_MULTIPLE_FACTCHECKS": {
+      "penalty": "Multiple fact-checks on the same claim signaled confusion and wasted resources."
+    }
+  },
+  "CRITICAL_OUTCOMES": {
+    "CRITICAL_SUCCESS": {
+      "shift": 4,
+      "text": "EXCEPTIONAL RESULT: Your response was perfectly calibrated. Not only was the attack neutralized, but public trust in your communications increased significantly."
+    },
+    "CRITICAL_FAILURE": {
+      "shift": -5,
+      "text": "CATASTROPHIC FAILURE: Your response amplified the very narrative you sought to suppress. Trust in your institution has been severely damaged."
+    }
+  }
+}

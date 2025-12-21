@@ -1,0 +1,64 @@
+/* src/screens/BriefingScreen.module.css */
+.card {
+  width: 100%;
+  max-width: 48rem;
+  background: rgba(26, 35, 50, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  border: 1px solid var(--midnight-border);
+  box-shadow: var(--shadow-xl);
+}
+
+@media (min-width: 768px) {
+  .card {
+    padding: 2.5rem;
+  }
+}
+
+.quote {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--cyan-300);
+  margin-bottom: var(--spacing-md);
+  min-height: 2rem;
+  animation: fadeIn var(--transition-normal);
+}
+
+@media (min-width: 768px) {
+  .quote {
+    font-size: 1.75rem;
+  }
+}
+
+.attribution {
+  font-size: 0.875rem;
+  color: var(--gray-400);
+  margin-bottom: var(--spacing-xl);
+  animation: fadeIn var(--transition-normal);
+}
+
+.text {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--gray-300);
+  margin-bottom: var(--spacing-xl);
+  white-space: pre-line;
+  animation: fadeIn var(--transition-slow);
+}
+
+.action {
+  margin-top: var(--spacing-xl);
+  animation: fadeIn var(--transition-slow);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

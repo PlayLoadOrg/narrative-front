@@ -1,0 +1,23 @@
+/* src/components/ui/Card.module.css */
+.card {
+  width: 100%;
+  max-width: 56rem;
+  background: rgba(26, 35, 50, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-xl);
+  padding: 1.5rem;
+  border: 1px solid var(--midnight-border);
+  box-shadow: var(--shadow-xl);
+  transition: filter var(--transition-normal);
+}
+
+.blurred {
+  filter: blur(4px);
+  pointer-events: none;
+}
+
+@media (min-width: 768px) {
+  .card {
+    padding: 2rem;
+  }
+}

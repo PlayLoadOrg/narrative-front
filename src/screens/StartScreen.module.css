@@ -1,0 +1,75 @@
+/* src/screens/StartScreen.module.css */
+.card {
+  width: 100%;
+  max-width: 56rem;
+  background: rgba(26, 35, 50, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  border: 1px solid var(--midnight-border);
+  box-shadow: var(--shadow-xl);
+  text-align: center;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto var(--spacing-lg);
+  opacity: 0.9;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+.titleContainer {
+  margin-bottom: var(--spacing-xl);
+}
+
+.mainTitle {
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, var(--cyan-400), var(--blue-400));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: var(--spacing-md);
+}
+
+@media (min-width: 768px) {
+  .mainTitle {
+    font-size: 3rem;
+  }
+}
+
+.brandText {
+  font-size: 0.875rem;
+  color: var(--cyan-400);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: var(--spacing-sm) 0;
+}
+
+.creditText {
+  font-size: 0.75rem;
+  color: var(--gray-500);
+  margin-bottom: var(--spacing-lg);
+}
+
+.disclaimerBox {
+  background: rgba(0, 51, 102, 0.2);
+  border-left: 3px solid var(--nato-blue-light);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  margin: var(--spacing-lg) 0;
+}
+
+.disclaimerText {
+  font-size: 0.875rem;
+  color: var(--gray-300);
+  line-height: 1.6;
+  text-align: left;
+}

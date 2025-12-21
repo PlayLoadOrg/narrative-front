@@ -1,0 +1,52 @@
+/* src/components/ui/Button.module.css */
+.button {
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: white;
+  background: var(--gray-700);
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-md);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--cyan-400);
+  outline-offset: 2px;
+}
+
+.primary {
+  background: linear-gradient(135deg, var(--nato-blue-light), var(--cyan-400));
+}
+
+.primary:hover:not(:disabled) {
+  background: linear-gradient(135deg, #0077dd, #33ddff);
+}
+
+.fullWidth {
+  width: 100%;
+}
