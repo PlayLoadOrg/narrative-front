@@ -6,7 +6,7 @@ interface MeterDisplayProps {
   value: number;
 }
 
-export function MeterDisplay({ value, meterType = 'tugofwar' }: MeterDisplayProps) {
+export function MeterDisplay({ value }: MeterDisplayProps) {
   const { t } = useTranslation();
   
   // Convert -10...10 range to 0%...100% for CSS positioning

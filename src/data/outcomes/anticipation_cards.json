@@ -1,0 +1,205 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "description": "Strategic Asset Pool for Draft Phase"
+  },
+  "families": {
+    "resource_harm": {
+      "name": "Resource & Harm",
+      "themes": ["scarcity", "atrocity"],
+      "description": "Narratives focusing on physical survival and safety."
+    },
+    "trust_cohesion": {
+      "name": "Trust & Cohesion",
+      "themes": ["betrayal", "conspiracy"],
+      "description": "Narratives focusing on intent, alliances, and hidden agendas."
+    },
+    "capability": {
+      "name": "Capability",
+      "themes": ["incompetence"],
+      "description": "Narratives focusing on effectiveness and governance."
+    }
+  },
+  "pool": [
+    {
+      "id": "pb_scarcity_1",
+      "type": "PREBUNK",
+      "targetTheme": "scarcity",
+      "family": "resource_harm",
+      "title": "Supply Chain Education",
+      "description": "Publicly detail logistics routes to preempt hoarding rumors.",
+      "cost": 5
+    },
+    {
+      "id": "pb_scarcity_2",
+      "type": "PREBUNK",
+      "targetTheme": "scarcity",
+      "family": "resource_harm",
+      "title": "Market Monitoring",
+      "description": "Establish transparent price-watch systems with local leaders.",
+      "cost": 5
+    },
+    {
+      "id": "cn_scarcity_1",
+      "type": "COUNTER_NARRATIVE",
+      "targetTheme": "scarcity",
+      "family": "resource_harm",
+      "title": "Shared Logistics",
+      "description": "Highlight mission assets delivering essential civilian aid.",
+      "cost": 5
+    },
+    {
+      "id": "cn_scarcity_2",
+      "type": "COUNTER_NARRATIVE",
+      "targetTheme": "scarcity",
+      "family": "resource_harm",
+      "title": "Infrastructure Investment",
+      "description": "Showcase energy and water projects built by the mission.",
+      "cost": 5
+    },
+    {
+      "id": "pb_atrocity_1",
+      "type": "PREBUNK",
+      "targetTheme": "atrocity",
+      "family": "resource_harm",
+      "title": "Deepfake Awareness",
+      "description": "Inoculate population against manipulated imagery before it appears.",
+      "cost": 5
+    },
+    {
+      "id": "pb_atrocity_2",
+      "type": "PREBUNK",
+      "targetTheme": "atrocity",
+      "family": "resource_harm",
+      "title": "Rules of Engagement",
+      "description": "Publicize strict civilian protection protocols.",
+      "cost": 5
+    },
+    {
+      "id": "cn_atrocity_1",
+      "type": "COUNTER_NARRATIVE",
+      "targetTheme": "atrocity",
+      "family": "resource_harm",
+      "title": "Medical Outreach",
+      "description": "Stories of mission medics treating local civilians.",
+      "cost": 5
+    },
+    {
+      "id": "cn_atrocity_2",
+      "type": "COUNTER_NARRATIVE",
+      "targetTheme": "atrocity",
+      "family": "resource_harm",
+      "title": "Protector's Pledge",
+      "description": "Emphasize the mandate to protect the vulnerable.",
+      "cost": 5
+    },
+    {
+      "id": "pb_betrayal_1",
+      "type": "PREBUNK",
+      "targetTheme": "betrayal",
+      "family": "trust_cohesion",
+      "title": "Alliance Unity Brief",
+      "description": "Preemptively address friction points with host nation.",
+      "cost": 5
+    },
+    {
+      "id": "pb_betrayal_2",
+      "type": "PREBUNK",
+      "targetTheme": "betrayal",
+      "family": "trust_cohesion",
+      "title": "Sovereignty Respect",
+      "description": "Clarify legal frameworks to debunk 'occupation' claims.",
+      "cost": 5
+    },
+    {
+      "id": "cn_betrayal_1",
+      "type": "COUNTER_NARRATIVE",
+      "targetTheme": "betrayal",
+      "family": "trust_cohesion",
+      "title": "Joint Patrols",
+      "description": "Imagery of local and mission forces working side-by-side.",
+      "cost": 5
+    },
+    {
+      "id": "cn_betrayal_2",
+      "type": "COUNTER_NARRATIVE",
+      "targetTheme": "betrayal",
+      "family": "trust_cohesion",
+      "title": "Cultural Partnership",
+      "description": "Highlight respect for local traditions and history.",
+      "cost": 5
+    },
+    {
+      "id": "pb_conspiracy_1",
+      "type": "PREBUNK",
+      "targetTheme": "conspiracy",
+      "family": "trust_cohesion",
+      "title": "Source Verification",
+      "description": "Teach audiences how to identify state-backed bot networks.",
+      "cost": 5
+    },
+    {
+      "id": "pb_conspiracy_2",
+      "type": "PREBUNK",
+      "targetTheme": "conspiracy",
+      "family": "trust_cohesion",
+      "title": "Echo Chamber Alert",
+      "description": "Warn against closed-group rumor propagation.",
+      "cost": 5
+    },
+    {
+      "id": "cn_conspiracy_1",
+      "type": "COUNTER_NARRATIVE",
+      "targetTheme": "conspiracy",
+      "family": "trust_cohesion",
+      "title": "Radical Transparency",
+      "description": "Livestream town halls to leave no room for 'secret agendas'.",
+      "cost": 5
+    },
+    {
+      "id": "cn_conspiracy_2",
+      "type": "COUNTER_NARRATIVE",
+      "targetTheme": "conspiracy",
+      "family": "trust_cohesion",
+      "title": "Open Door Policy",
+      "description": "Invite local media to inspect mission facilities.",
+      "cost": 5
+    },
+    {
+      "id": "pb_incompetence_1",
+      "type": "PREBUNK",
+      "targetTheme": "incompetence",
+      "family": "capability",
+      "title": "Complexity Context",
+      "description": "Explain logistical challenges before failures occur.",
+      "cost": 5
+    },
+    {
+      "id": "pb_incompetence_2",
+      "type": "PREBUNK",
+      "targetTheme": "incompetence",
+      "family": "capability",
+      "title": "Proactive Transparency",
+      "description": "Publish incident reports before adversaries can spin them.",
+      "cost": 5
+    },
+    {
+      "id": "cn_incompetence_1",
+      "type": "COUNTER_NARRATIVE",
+      "targetTheme": "incompetence",
+      "family": "capability",
+      "title": "Rapid Response Demo",
+      "description": "Showcase speed and efficiency in emergency exercises.",
+      "cost": 5
+    },
+    {
+      "id": "cn_incompetence_2",
+      "type": "COUNTER_NARRATIVE",
+      "targetTheme": "incompetence",
+      "family": "capability",
+      "title": "Tech Superiority",
+      "description": "Highlight advanced capabilities helping the region.",
+      "cost": 5
+    }
+  ]
+}

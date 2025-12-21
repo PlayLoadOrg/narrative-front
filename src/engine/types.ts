@@ -15,6 +15,9 @@ export type ResponseType = 'IGNORE' | 'FACT_CHECK' | 'PRE_BUNK' | 'COUNTER_NARRA
 export type OutcomeType = 'success' | 'neutral' | 'failure';
 export type GamePhase = 'START' | 'BRIEFING' | 'MODE_SELECTION' | 'GAME' | 'END';
 export type GameMode = 'SCENARIO' | 'PROCEDURAL';
+export type CardType = 'PREBUNK' | 'COUNTER_NARRATIVE';
+export type CardFamilyType = 'resource_harm' | 'trust_cohesion' | 'capability';
+export type AudioTrack = 'neutral' | 'unity' | 'fracturing';
 
 // ============================================================================
 // INTELLIGENCE DATA
@@ -179,9 +182,45 @@ export interface ScenarioRecord {
 // UI STATE (Separate from Game State)
 // ============================================================================
 
+export interface AudioState {
+  currentTrack: AudioTrack;
+  volume: number;
+  isMuted: boolean;
+}
+
 export interface UIState {
   isFrontopediaOpen: boolean;
   activeArticleId: string | null;
   openFrontopedia: (articleId?: string) => void;
   closeFrontopedia: () => void;
+}
+
+// ============================================================================
+// Card Types for anticipation_cards
+// ============================================================================
+
+export interface AnticipationCard {
+  id: string;
+  type: CardType;
+  targetTheme: string;
+  family: CardFamilyType;
+  title: string;
+  description: string;
+  cost: number;
+}
+
+export interface CardFamily {
+  name: string;
+  themes: string[];
+  description: string;
+}
+
+export interface CardPoolMeta {
+  version: string;
+  description: string;
+}
+
+export interface PlayerDeck {
+  counterNarratives: AnticipationCard[];
+  preBunks: AnticipationCard[];
 }
