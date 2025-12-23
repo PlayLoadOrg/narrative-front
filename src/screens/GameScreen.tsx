@@ -319,7 +319,7 @@ export function GameScreen({
       />
 
       <Card>
-        <div className={styles.headerSubtitle}>Strategic Communications Coordinator</div>
+        <div className={styles.headerSubtitle}>Information Warfare Simulator</div>
 
         {/* Resource Display */}
         <div className={styles.resourceDisplay}>
