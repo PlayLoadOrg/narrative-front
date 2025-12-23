@@ -28,7 +28,6 @@ export function MeterDisplay({ value }: MeterDisplayProps) {
       
       <div className={styles.labels}>
         <span className={styles.fragmentation}>{t('meter.fragmentationLabel')}</span>
-        <span className={styles.neutral}>{t('meter.neutralLabel')}</span>
         <span className={styles.unity}>{t('meter.unityLabel')}</span>
       </div>
       

@@ -7,7 +7,7 @@ import styles from './CardDraftPhase.module.css';
 
 interface CardDraftPhaseProps {
   availableCards: AnticipationCard[];
-  onConfirmSelection: (selectedCard: AnticipationCard) => void;
+  onConfirmSelection: (selectedCards: AnticipationCard[]) => void;
   availableManpower: number;
 }
 
@@ -16,17 +16,32 @@ export function CardDraftPhase({
   onConfirmSelection,
   availableManpower 
 }: CardDraftPhaseProps) {
-  const [selectedCard, setSelectedCard] = useState<AnticipationCard | null>(null);
+  const [selectedCards, setSelectedCards] = useState<AnticipationCard[]>([]);
 
   const canAfford = (card: AnticipationCard) => {
-    return availableManpower >= card.cost;
+    const currentCost = selectedCards.reduce((sum, c) => sum + c.cost, 0);
+    return (currentCost + card.cost) <= availableManpower;
+  };
+
+  const isSelected = (card: AnticipationCard) => {
+    return selectedCards.some(c => c.id === card.id);
+  };
+
+  const handleCardToggle = (card: AnticipationCard) => {
+    if (isSelected(card)) {
+      // Remove card
+      setSelectedCards(prev => prev.filter(c => c.id !== card.id));
+    } else if (canAfford(card)) {
+      // Add card
+      setSelectedCards(prev => [...prev, card]);
+    }
   };
 
   const handleConfirm = () => {
-    if (selectedCard) {
-      onConfirmSelection(selectedCard);
-    }
+    onConfirmSelection(selectedCards);
   };
+
+  const totalCost = selectedCards.reduce((sum, c) => sum + c.cost, 0);
 
   return (
     <div className={styles.container}>
@@ -34,27 +49,34 @@ export function CardDraftPhase({
         <h3 className={styles.title}>Anticipation Phase</h3>
         <p className={styles.subtitle}>
           Commander, now we prepare for adversary. We craft narratives of our own, yes? 
-          We've prepared options.
+          We've prepared options. Select 0-3 cards to build defenses.
         </p>
+        <div className={styles.costSummary}>
+          <span>Selected: {selectedCards.length}/3</span>
+          <span>•</span>
+          <span>Cost: {totalCost} MP</span>
+          <span>•</span>
+          <span>Remaining: {availableManpower - totalCost} MP</span>
+        </div>
       </div>
 
       <div className={styles.cardGrid}>
         {availableCards.map((card) => {
           const affordable = canAfford(card);
-          const isSelected = selectedCard?.id === card.id;
+          const selected = isSelected(card);
 
           return (
             <button
               key={card.id}
-              className={`${styles.card} ${isSelected ? styles.selected : ''} ${!affordable ? styles.disabled : ''}`}
-              onClick={() => affordable && setSelectedCard(card)}
-              disabled={!affordable}
+              className={`${styles.card} ${selected ? styles.selected : ''} ${!affordable && !selected ? styles.disabled : ''}`}
+              onClick={() => handleCardToggle(card)}
+              disabled={!affordable && !selected}
             >
               <div className={styles.cardHeader}>
                 <div className={styles.cardType}>
                   {card.type === 'PREBUNK' ? '🛡️ PRE-BUNK' : '📢 COUNTER-NARRATIVE'}
                 </div>
-                {isSelected && (
+                {selected && (
                   <CheckCircle size={20} className={styles.checkIcon} />
                 )}
               </div>
@@ -83,11 +105,13 @@ export function CardDraftPhase({
       <div className={styles.actions}>
         <Button
           onClick={handleConfirm}
-          disabled={!selectedCard}
           variant="primary"
           fullWidth
         >
-          {selectedCard ? `Confirm Selection: ${selectedCard.title}` : 'Select a Card'}
+          {selectedCards.length === 0 
+            ? 'Skip Anticipation (Save All MP)' 
+            : `Confirm Selection (${selectedCards.length} card${selectedCards.length > 1 ? 's' : ''})`
+          }
         </Button>
       </div>
     </div>

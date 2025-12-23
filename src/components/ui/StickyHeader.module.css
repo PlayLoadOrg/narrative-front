@@ -1,0 +1,177 @@
+/* src/components/ui/StickyHeader.module.css */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 51, 102, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid var(--cyan-400);
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.menuButton {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.3);
+  border: 2px solid var(--cyan-400);
+  border-radius: var(--radius-md);
+  color: var(--cyan-400);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.menuButton:hover {
+  background: rgba(34, 211, 238, 0.2);
+  transform: scale(1.05);
+}
+
+.menuButton:focus-visible {
+  outline: 2px solid var(--cyan-400);
+  outline-offset: 2px;
+}
+
+.brand {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.5rem 1.5rem;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--cyan-400);
+}
+
+.brandIcon {
+  color: var(--cyan-400);
+  flex-shrink: 0;
+}
+
+.brandText {
+  font-size: 1rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--cyan-400), var(--blue-400));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.brandLogo {
+  height: 28px;
+  width: 28px;
+  opacity: 0.9;
+  flex-shrink: 0;
+}
+
+/* Menu Dropdown */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.menu {
+  position: fixed;
+  top: 4.5rem;
+  left: 1rem;
+  width: 280px;
+  background: rgba(26, 35, 50, 0.98);
+  border: 2px solid var(--cyan-400);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-xl);
+  z-index: 1001;
+  animation: slideIn var(--transition-normal);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menuTitle {
+  font-size: 1.25rem;
+  color: var(--cyan-400);
+  margin: 0 0 1rem 0;
+  text-align: center;
+  font-weight: 700;
+}
+
+.menuItems {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: rgba(0, 51, 102, 0.3);
+  border: 1px solid var(--nato-blue);
+  border-radius: var(--radius-md);
+  color: var(--gray-200);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: left;
+  width: 100%;
+}
+
+.menuItem:hover {
+  background: rgba(0, 102, 204, 0.5);
+  border-color: var(--cyan-400);
+  color: white;
+  transform: translateX(4px);
+}
+
+.menuItem:focus-visible {
+  outline: 2px solid var(--cyan-400);
+  outline-offset: 2px;
+}
+
+.menuItem svg {
+  flex-shrink: 0;
+  color: var(--cyan-400);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .brandText {
+    font-size: 0.875rem;
+  }
+  
+  .brandLogo {
+    height: 24px;
+    width: 24px;
+  }
+}

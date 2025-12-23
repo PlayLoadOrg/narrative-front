@@ -1,41 +1,6 @@
 /* src/screens/GameScreen.module.css */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: var(--spacing-sm);
-  padding-bottom: var(--spacing-md);
-  border-bottom: 1px solid var(--midnight-border);
-}
 
-.headerLeft {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: rgba(0, 51, 102, 0.3);
-  padding: 0.5rem 1rem;
-  border-radius: var(--radius-full);
-  border: 1px solid var(--nato-blue);
-}
-
-.headerIcon {
-  color: var(--cyan-400);
-}
-
-.headerTitle {
-  font-size: 1.125rem;
-  font-weight: 700;
-  background: linear-gradient(135deg, var(--cyan-400), var(--blue-400));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.headerLogo {
-  height: 40px;
-  width: auto;
-  opacity: 0.6;
-}
+/* Remove old header styles since we're using StickyHeader now */
 
 .headerSubtitle {
   text-align: center;
@@ -43,48 +8,52 @@
   color: var(--cyan-400);
   font-weight: 600;
   margin-bottom: var(--spacing-md);
+  padding: 0 1rem;
 }
 
 .resourceDisplay {
   display: flex;
   justify-content: space-around;
-  gap: var(--spacing-md);
-  padding: var(--spacing-md);
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
   background: rgba(0, 51, 102, 0.2);
   border-radius: var(--radius-md);
   border: 1px solid var(--nato-blue);
   margin-bottom: var(--spacing-md);
+  flex-wrap: wrap;
 }
 
 .roundDisplay {
   display: flex;
   align-items: center;
   gap: var(--spacing-sm);
+  font-size: 0.875rem;
 }
 
 .resourceLabel {
-  font-size: 0.875rem;
   color: var(--gray-400);
   font-weight: 600;
   text-transform: uppercase;
+  font-size: 0.75rem;
 }
 
 .resourceValue {
-  font-size: 1.125rem;
   font-weight: 700;
   color: var(--cyan-400);
+  font-size: 1rem;
 }
 
 .tabNavigation {
   display: flex;
-  gap: var(--spacing-sm);
+  gap: var(--spacing-xs);
   margin: var(--spacing-md) 0;
   border-bottom: 2px solid var(--midnight-border);
+  padding: 0 var(--spacing-xs);
 }
 
 .tabButton {
   flex: 1;
-  padding: var(--spacing-md);
+  padding: var(--spacing-sm) var(--spacing-xs);
   background: none;
   border: none;
   border-bottom: 3px solid transparent;
@@ -92,7 +61,8 @@
   font-weight: 600;
   cursor: pointer;
   transition: all var(--transition-fast);
-  font-size: 0.875rem;
+  font-size: 0.8rem;
+  white-space: nowrap;
 }
 
 .tabButton:hover {
@@ -110,24 +80,28 @@
 }
 
 .tabContent {
-  min-height: 400px;
-  padding: var(--spacing-md) 0;
+  min-height: 300px;
+  padding: var(--spacing-sm) 0;
 }
 
 /* Scenario Tab */
+.scenarioTab {
+  padding: 0 var(--spacing-sm);
+}
+
 .injectSection {
   background: rgba(220, 38, 38, 0.1);
   border-left: 3px solid var(--red-600);
   border-radius: var(--radius-md);
-  padding: var(--spacing-lg);
-  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
 }
 
 .injectHeader {
   display: flex;
   align-items: center;
-  gap: var(--spacing-md);
-  margin-bottom: var(--spacing-md);
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
 }
 
 .injectIcon {
@@ -136,24 +110,26 @@
 }
 
 .injectTitle {
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: var(--red-400);
   margin: 0;
 }
 
 .injectText {
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 0.9rem;
+  line-height: 1.5;
   color: var(--gray-200);
+  margin: 0;
 }
 
 /* Comms Tab */
 .commsTab {
   width: 100%;
+  padding: 0 var(--spacing-sm);
 }
 
 .commsTabTitle {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   color: var(--cyan-400);
   margin-bottom: var(--spacing-md);
   text-align: center;
@@ -162,10 +138,11 @@
 /* Decision Tab */
 .decisionTab {
   width: 100%;
+  padding: 0 var(--spacing-sm);
 }
 
 .decisionTabTitle {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   color: var(--cyan-400);
   margin-bottom: var(--spacing-md);
   text-align: center;
@@ -173,12 +150,13 @@
 
 .manpowerSummary {
   text-align: center;
-  padding: var(--spacing-md);
+  padding: var(--spacing-sm);
   background: rgba(0, 51, 102, 0.2);
   border-radius: var(--radius-md);
   font-weight: 600;
   color: var(--cyan-400);
   margin-bottom: var(--spacing-md);
+  font-size: 0.9rem;
 }
 
 .errorText {
@@ -190,21 +168,20 @@
 
 .footer {
   text-align: center;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   color: var(--gray-500);
   margin-top: var(--spacing-md);
-  padding-top: var(--spacing-md);
+  padding-top: var(--spacing-sm);
   border-top: 1px solid var(--midnight-border);
 }
 
-/* Add to src/screens/GameScreen.module.css */
-
+/* Transition Phase */
 .transitionPhase {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 400px;
-  padding: 2rem;
+  min-height: 300px;
+  padding: var(--spacing-lg);
 }
 
 .transitionMessage {
@@ -213,14 +190,39 @@
   background: rgba(0, 51, 102, 0.2);
   border: 2px solid var(--cyan-400);
   border-radius: var(--radius-lg);
-  padding: 2rem;
+  padding: 1.5rem;
   text-align: center;
 }
 
 .filterText {
-  font-size: 1.125rem;
-  line-height: 1.8;
+  font-size: 1rem;
+  line-height: 1.6;
   color: var(--cyan-300);
   font-style: italic;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .tabButton {
+    font-size: 0.75rem;
+    padding: var(--spacing-sm) 0.25rem;
+  }
+  
+  .injectTitle {
+    font-size: 0.9rem;
+  }
+  
+  .injectText {
+    font-size: 0.85rem;
+  }
+  
+  .manpowerSummary {
+    font-size: 0.85rem;
+  }
+  
+  .decisionTabTitle,
+  .commsTabTitle {
+    font-size: 1rem;
+  }
 }

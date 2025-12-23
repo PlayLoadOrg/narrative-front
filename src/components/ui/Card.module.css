@@ -5,7 +5,7 @@
   background: rgba(26, 35, 50, 0.95);
   backdrop-filter: blur(10px);
   border-radius: var(--radius-xl);
-  padding: 1.5rem;
+  padding: 1rem;
   border: 1px solid var(--midnight-border);
   box-shadow: var(--shadow-xl);
   transition: filter var(--transition-normal);
@@ -17,6 +17,12 @@
 }
 
 @media (min-width: 768px) {
+  .card {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
   .card {
     padding: 2rem;
   }

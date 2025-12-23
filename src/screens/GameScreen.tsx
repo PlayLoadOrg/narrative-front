@@ -1,9 +1,9 @@
 // src/screens/GameScreen.tsx
 import { useState, useEffect } from 'react';
-import { Shield, AlertTriangle } from 'lucide-react';
+import { AlertTriangle } from 'lucide-react';
 import { Card } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
-import { SettingsMenu } from '../components/ui/SettingsMenu';
+import { StickyHeader } from '../components/ui/StickyHeader';
 import { MeterDisplay } from '../components/game/MeterDisplay';
 import { ManpowerDisplay } from '../components/game/ManpowerDisplay';
 import { IntelligenceDashboard } from '../components/game/IntelligenceDashboard';
@@ -19,7 +19,6 @@ import { useUIStore } from '../engine/uiStore';
 import { OutcomeCalculator } from '../engine/resolver';
 import { GAME_CONFIG, RESPONSE_TYPES } from '../engine/constants';
 import type { PlayerResponse, AnticipationCard, AudioTrack } from '../engine/types';
-import narrativeFrontLogo from '../assets/narrativeFront.svg';
 import styles from './GameScreen.module.css';
 import { PlayloadFooter } from '../components/ui/PlayloadFooter';
 
@@ -98,12 +97,16 @@ export function GameScreen({
     }
   }, [gamePhase, currentScenario]);
 
-  // Start audio when game loads
+  // Start audio when game loads (only once)
   useEffect(() => {
-    if (!audio.isMuted && !audioPlayer.isPlaying) {
-      audioPlayer.play();
+    if (!audio.isMuted) {
+      // Small delay to ensure audio context is ready
+      const timer = setTimeout(() => {
+        audioPlayer.play();
+      }, 500);
+      return () => clearTimeout(timer);
     }
-  }, [audio.isMuted, audioPlayer]);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Handle audio track switching based on meter position
   useEffect(() => {
@@ -125,19 +128,22 @@ export function GameScreen({
   }, [meter, audioPlayer]);
 
   /**
-   * Handle card selection during anticipation phase
+   * Handle card selection during anticipation phase (now supports 0-3 cards)
    */
-  const handleCardSelection = (card: AnticipationCard) => {
-    // Deduct manpower
-    onManpowerChange(-card.cost);
+  const handleCardSelection = (cards: AnticipationCard[]) => {
+    // Deduct total manpower
+    const totalCost = cards.reduce((sum, card) => sum + card.cost, 0);
+    onManpowerChange(-totalCost);
     
-    // Add to built cards
-    setBuiltCards(prev => [...prev, card]);
+    // Add all to built cards
+    setBuiltCards(prev => [...prev, ...cards]);
     
-    // Register pre-bunk if applicable
-    if (card.type === 'PREBUNK') {
-      onRegisterPreBunk(card.targetTheme);
-    }
+    // Register pre-bunks if applicable
+    cards.forEach(card => {
+      if (card.type === 'PREBUNK') {
+        onRegisterPreBunk(card.targetTheme);
+      }
+    });
     
     // Move to transition phase
     setGamePhase('transition');
@@ -250,10 +256,14 @@ export function GameScreen({
   };
 
   const handleToggleMute = () => {
-    toggleMute();
-    if (audio.isMuted) {
+    const newMutedState = !audio.isMuted;
+    toggleMute(); // This updates the UI state
+    
+    if (newMutedState) {
+      // Just muted - pause audio
       audioPlayer.pause();
     } else {
+      // Just unmuted - resume audio
       audioPlayer.play();
     }
   };
@@ -297,32 +307,19 @@ export function GameScreen({
 
   return (
     <div className="screen-container">
-      {/* Settings Menu */}
-      <SettingsMenu
+      {/* Sticky Header with Settings Menu */}
+      <StickyHeader
         onSaveGame={handleSaveGame}
         onLoadGame={handleLoadGame}
         onReturnToMenu={handleReturnToMenu}
         onOpenFrontopedia={handleOpenFrontopedia}
         isMuted={audio.isMuted}
         onToggleMute={handleToggleMute}
+        showSettings={true}
       />
 
       <Card>
-        {/* Header */}
-        <header className={styles.header}>
-          <div className={styles.headerLeft}>
-            <Shield className={styles.headerIcon} />
-            <span className={styles.headerTitle}>{t('game.appTitle')}</span>
-          </div>
-          
-          <img 
-            src={narrativeFrontLogo} 
-            alt="Narrative Front Logo" 
-            className={styles.headerLogo} 
-          />
-        </header>
-
-        <div className={styles.headerSubtitle}>{t('game.appSubtitle')}</div>
+        <div className={styles.headerSubtitle}>Strategic Communications Coordinator</div>
 
         {/* Resource Display */}
         <div className={styles.resourceDisplay}>

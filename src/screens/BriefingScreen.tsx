@@ -11,21 +11,13 @@ interface BriefingScreenProps {
 
 export function BriefingScreen({ onStart }: BriefingScreenProps) {
   const { t } = useTranslation();
-  const [quoteComplete, setQuoteComplete] = useState(false);
-  const [textComplete, setTextComplete] = useState(false);
+  const [showButton, setShowButton] = useState(false);
 
-  // Simple typewriter effect simulation
   useEffect(() => {
-    const quoteTimer = setTimeout(() => setQuoteComplete(true), 1500);
-    return () => clearTimeout(quoteTimer);
+    // Show button as soon as text is visible
+    const timer = setTimeout(() => setShowButton(true), 100);
+    return () => clearTimeout(timer);
   }, []);
-
-  useEffect(() => {
-    if (quoteComplete) {
-      const textTimer = setTimeout(() => setTextComplete(true), 2500);
-      return () => clearTimeout(textTimer);
-    }
-  }, [quoteComplete]);
 
   return (
     <div className="screen-container">
@@ -34,19 +26,15 @@ export function BriefingScreen({ onStart }: BriefingScreenProps) {
           {t('briefing.quote')}
         </div>
         
-        {quoteComplete && (
-          <div className={styles.attribution}>
-            {t('briefing.attribution')}
-          </div>
-        )}
+        <div className={styles.attribution}>
+          {t('briefing.attribution')}
+        </div>
         
-        {quoteComplete && (
-          <div className={styles.text}>
-            {t('briefing.text')}
-          </div>
-        )}
+        <div className={styles.text}>
+          {t('briefing.text')}
+        </div>
         
-        {textComplete && (
+        {showButton && (
           <div className={styles.action}>
             <Button 
               onClick={onStart} 

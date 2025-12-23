@@ -21,8 +21,8 @@ export function ResponsePanel({
   builtCards
 }: ResponsePanelProps) {
   const { t } = useTranslation();
-  const [factCheckIntensity, setFactCheckIntensity] = useState(2); // 2-4 MP
-  const [discreditIntensity, setDiscreditIntensity] = useState(2); // 2-4 MP
+  const [factCheckIntensity, setFactCheckIntensity] = useState(2);
+  const [discreditIntensity, setDiscreditIntensity] = useState(2);
 
   const getSelectedResponse = (type: string) => {
     return selectedResponses.find(r => r.type === type);
@@ -45,6 +45,17 @@ export function ResponsePanel({
     }
   };
 
+  const handleFactCheckIntensityChange = (newIntensity: number) => {
+    setFactCheckIntensity(newIntensity);
+    const selected = getSelectedResponse(RESPONSE_TYPES.FACT_CHECK);
+    if (selected) {
+      onSelectResponse({
+        type: RESPONSE_TYPES.FACT_CHECK,
+        manpowerCost: newIntensity
+      });
+    }
+  };
+
   const handleDiscreditToggle = () => {
     const selected = getSelectedResponse(RESPONSE_TYPES.DISCREDIT_SOURCE);
     if (selected) {
@@ -53,6 +64,17 @@ export function ResponsePanel({
       onSelectResponse({
         type: RESPONSE_TYPES.DISCREDIT_SOURCE,
         manpowerCost: discreditIntensity
+      });
+    }
+  };
+
+  const handleDiscreditIntensityChange = (newIntensity: number) => {
+    setDiscreditIntensity(newIntensity);
+    const selected = getSelectedResponse(RESPONSE_TYPES.DISCREDIT_SOURCE);
+    if (selected) {
+      onSelectResponse({
+        type: RESPONSE_TYPES.DISCREDIT_SOURCE,
+        manpowerCost: newIntensity
       });
     }
   };
@@ -96,11 +118,13 @@ export function ResponsePanel({
               min="2"
               max="4"
               value={factCheckIntensity}
-              onChange={(e) => setFactCheckIntensity(parseInt(e.target.value))}
+              onChange={(e) => handleFactCheckIntensityChange(parseInt(e.target.value))}
               className={styles.slider}
               disabled={!getSelectedResponse(RESPONSE_TYPES.FACT_CHECK)}
             />
-            <span className={styles.sliderValue}>{factCheckIntensity === 2 ? 'Basic' : factCheckIntensity === 3 ? 'Standard' : 'Thorough'}</span>
+            <span className={styles.sliderValue}>
+              {factCheckIntensity === 2 ? 'Basic' : factCheckIntensity === 3 ? 'Standard' : 'Thorough'}
+            </span>
           </div>
         </div>
 
@@ -126,11 +150,13 @@ export function ResponsePanel({
               min="2"
               max="4"
               value={discreditIntensity}
-              onChange={(e) => setDiscreditIntensity(parseInt(e.target.value))}
+              onChange={(e) => handleDiscreditIntensityChange(parseInt(e.target.value))}
               className={styles.slider}
               disabled={!getSelectedResponse(RESPONSE_TYPES.DISCREDIT_SOURCE)}
             />
-            <span className={styles.sliderValue}>{discreditIntensity === 2 ? 'Light' : discreditIntensity === 3 ? 'Moderate' : 'Aggressive'}</span>
+            <span className={styles.sliderValue}>
+              {discreditIntensity === 2 ? 'Light' : discreditIntensity === 3 ? 'Moderate' : 'Aggressive'}
+            </span>
           </div>
           {getSelectedResponse(RESPONSE_TYPES.DISCREDIT_SOURCE) && (
             <div className={styles.warning}>
