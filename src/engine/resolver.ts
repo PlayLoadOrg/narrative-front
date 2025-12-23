@@ -1,6 +1,6 @@
 // src/engine/resolver.ts
 
-import { RESPONSE_TYPES, FACT_CHECK_THOROUGH_COST, PROBABILITY_CONFIG, OUTCOME_TYPES } from './constants';
+import { RESPONSE_TYPES, PROBABILITY_CONFIG, OUTCOME_TYPES } from './constants';
 import outcomesData from '../data/outcomes/outcomes.json';
 import type { IntelligenceData, PlayerResponse, RoundOutcome, OutcomeType } from './types';
 
@@ -150,12 +150,14 @@ export class OutcomeCalculator {
   /**
    * Fact-Check modifiers (Hours Active is key)
    */
-  private applyFactCheckModifiers(base: number, cost: number, intel: IntelligenceData): number {
-    let chance = base;
+  private applyFactCheckModifiers(baseChance: number, cost: number, intel: IntelligenceData): number {
+    let chance = baseChance;
     
-    // Intensity bonus (2 MP = +0%, 3 MP = +15%)
-    if (cost === FACT_CHECK_THOROUGH_COST) {
-      chance += 0.15;
+    // Variable intensity based on cost (2-4 MP)
+    if (cost === 3) {
+      chance += 0.10;
+    } else if (cost === 4) {
+      chance += 0.20;
     }
     
     // Hours Active modifiers (from table)
@@ -185,8 +187,8 @@ export class OutcomeCalculator {
   /**
    * Discredit Source modifiers (Bot Amplification is key)
    */
-  private applyDiscreditModifiers(base: number, intel: IntelligenceData): number {
-    let chance = base;
+  private applyDiscreditModifiers(baseChance: number, intel: IntelligenceData): number {
+    let chance = baseChance;
     
     // Bot Amplification modifiers
     if (intel.botAmplification >= 60) {
@@ -208,8 +210,8 @@ export class OutcomeCalculator {
   /**
    * Counter-Narrative modifiers (Emotional Resonance matters)
    */
-  private applyCounterNarrativeModifiers(base: number, intel: IntelligenceData): number {
-    let chance = base + 0.10; // Slight base bonus
+  private applyCounterNarrativeModifiers(baseChance: number, intel: IntelligenceData): number {
+    let chance = baseChance + 0.10; // Slight base bonus
     
     // Works better against emotional attacks
     if (intel.emotionalResonance >= 7) {
@@ -227,9 +229,9 @@ export class OutcomeCalculator {
   /**
    * Pre-Bunk modifiers (Long-term investment)
    */
-  private applyPreBunkModifiers(base: number, preBunksUsed: string[], scenarioTheme: string): number {
+  private applyPreBunkModifiers(baseChance: number, preBunksUsed: string[], scenarioTheme: string): number {
     // Pre-bunking has modest immediate impact but creates future synergy
-    let chance = base;
+    let chance = baseChance;
     
     // If we've already pre-bunked this theme, bonus
     if (preBunksUsed.includes(scenarioTheme)) {
@@ -242,7 +244,7 @@ export class OutcomeCalculator {
   /**
    * Ignore modifiers (Very situational)
    */
-  private applyIgnoreModifiers(base: number, intel: IntelligenceData): number {
+  private applyIgnoreModifiers(_baseChance: number, intel: IntelligenceData): number {
     // Ignore only works if narrative is dying naturally
     if (intel.emotionalResonance < 4 && intel.botAmplification < 30) {
       return 0.7; // High success if conditions are right

@@ -151,3 +151,103 @@
   font-weight: 600;
   margin-top: var(--spacing-sm);
 }
+
+/* Add to src/components/game/ResponsePanel.module.css */
+
+.sliderOption {
+  padding: var(--spacing-lg);
+  background: rgba(0, 0, 0, 0.4);
+  border: 2px solid var(--gray-700);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.sliderOption.disabled {
+  opacity: 0.4;
+}
+
+.optionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.optionTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.sliderContainer {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-sm);
+}
+
+.sliderLabel {
+  font-size: 0.875rem;
+  color: var(--gray-400);
+  min-width: 70px;
+}
+
+.slider {
+  flex: 1;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: var(--gray-700);
+  outline: none;
+  cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: var(--radius-full);
+  background: var(--cyan-400);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.slider::-webkit-slider-thumb:hover {
+  background: var(--cyan-300);
+  transform: scale(1.1);
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: var(--radius-full);
+  background: var(--cyan-400);
+  cursor: pointer;
+  border: none;
+  transition: all var(--transition-fast);
+}
+
+.slider:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.sliderValue {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--cyan-400);
+  min-width: 80px;
+}

@@ -1,11 +1,9 @@
-
-  {
-
+{
   "meta": {
     "title": "NARRATIVE FRONTOPEDIA",
     "version": "0.1.0",
     "description": "Strategic communications encyclopedia with tactical commentary",
-    "voice": "Filter - unnamed tactical advisor, Baltic origin implied through syntax and perspective",
+    "voice": "Filter - AI generated composite fictional tactical advisor. Baltic origin implied through syntax and perspective to create realism, but no personal details known. Uses ‘adversary’ framing to train patterns rather than demonize any particular actor",
     "lastUpdated": "2025-01-20"
   },
 
@@ -30,7 +28,7 @@
       "short": "Warfare targeting the mind, not the body.",
       "filter_intro": "Kinetic warfare breaks things. Cognitive warfare breaks thinking. Guess which is easier to repair.",
       "body": "Cognitive warfare exploits human psychology to influence perception, decision-making, and behavior without conventional military engagement. It weaponizes information, exploiting cognitive biases, emotional triggers, and social dynamics to achieve strategic objectives.\n\nUnlike traditional propaganda aimed at persuasion, modern cognitive warfare often aims at confusion, division, and erosion of institutional trust. The goal is not necessarily to make targets believe specific falsehoods, but to make them uncertain about all truth.",
-      "filter_commentary": "Western colleagues sometimes ask: 'How do we know when cognitive warfare is happening?' Baltic answer: it is always happening. Question is only intensity. Like weather - sometimes rain, sometimes storm, but sky is never empty.\n\nAdversary learned long ago: why fight NATO army when you can make NATO populations vote to leave? Why invade when you can make neighbor's citizens hate each other? Patience and packets. Very cost effective.",
+      "filter_commentary": "Western colleagues sometimes ask: 'How do we know when cognitive warfare is happening?' It is always happening. Question is only intensity. Like weather - sometimes rain, sometimes storm, but sky is never empty.\n\nAdversary learned long ago: why fight NATO army when you can make NATO populations vote to leave? Why invade when you can make neighbor's citizens hate each other? Patience and packets. Very cost effective.",
       "in_game": "Every scenario represents an adversary cognitive attack. Your responses shape whether the attack succeeds, fails, or - most often - achieves partial effects that accumulate over time.",
       "sources": [
         "Cluzel, F. (2020). 'Cognitive Warfare.' NATO Innovation Hub.",
@@ -58,7 +56,7 @@
       "short": "Why corrections fail even when people accept them.",
       "filter_intro": "You can make person say 'yes, I was wrong.' Person will still think old way. Brain is not so simple.",
       "body": "The continued influence effect is one of the most frustrating findings in misinformation research: even when people acknowledge a correction and accept that the original information was false, they continue to be influenced by the misinformation in their reasoning and judgments.\n\nThis occurs because human memory is not like computer storage. We do not simply delete old files. The original misinformation remains encoded, connected to emotional responses and other memories. The correction adds a 'tag' saying 'this is wrong,' but the original associations persist.\n\nRetraction is especially ineffective when:\n• The misinformation fits existing beliefs or worldviews\n• Emotional stakes are high\n• The false narrative is more coherent or compelling than the truth\n• Significant time has passed since initial exposure",
-      "filter_commentary": "I have seen this many times. Press conference, evidence presented, journalists nod, correction published. Next week, same journalists write stories using old false framing. Not malice - just how brain works.\n\nThis is why adversary does not need lie to survive investigation. Only needs lie to exist long enough to leave mark. Correction comes, makes small headline. But damage is done. Scar remains.\n\nSome Western colleagues still believe: 'Truth will win in end.' Very optimistic. Very American. In Baltics we learn: truth needs help. Much help.",
+      "filter_commentary": "I have seen this many times. Press conference, evidence presented, journalists nod, correction published. Next week, same journalists write stories using old false framing. Not malice - just how brain works.\n\nThis is why adversary does not need lie to survive investigation. Only needs lie to exist long enough to leave mark. Correction comes, makes small headline. But damage is done. Scar remains.\n\nSome Western colleagues still believe: 'Truth will win in end.' Very optimistic. Truth needs help. Much help.",
       "in_game": "High 'Hours Active' scenarios face continued influence penalties. Even successful fact-checks in late-stage narratives may show reduced meter gains - the correction works, but shadows remain.",
       "sources": [
         "Johnson, H. M., & Seifert, C. M. (1994). 'Sources of the Continued Influence Effect.' Journal of Experimental Psychology.",
@@ -207,7 +205,7 @@
       "short": "How long the narrative has been circulating.",
       "filter_intro": "Time is enemy. Fresh lie is soft. Old lie is hard. This number tells you how hard.",
       "body": "Hours Active measures the duration a hostile narrative has been circulating before reaching the strategic communications team's attention. This metric is crucial because misinformation resistance to correction increases dramatically over time.\n\nThe narrative lifecycle follows a predictable pattern:\n\n0-12 hours: Emergence. Narrative is fresh, audiences are not committed, correction is most effective.\n\n12-48 hours: Spread. Narrative is gaining traction, some social commitment forming, but still correctable.\n\n48-96 hours: Hardening. Narrative is embedding in group identity, fact-checking effectiveness declining, counter-narratives become more valuable.\n\n96+ hours: Entrenchment. Correction faces continued influence effect, only pre-bunk payoffs and powerful counter-narratives remain effective.",
-      "filter_commentary": "Western systems often too slow. Detection, verification, approval, legal review, translation, coordination. Many hours pass. Adversary plans for this.\n\nIn Baltics we learn: need pre-authorized responses. Playbook ready. When attack comes, do not start from zero. Match pattern, deploy counter. Hours, not days.\n\nStill, some attacks are novel. Need verification, need careful response. Tension between speed and accuracy. Move too fast, make mistakes adversary exploits. Move too slow, narrative hardens.\n\nNo perfect answer. Only trade-offs.",
+      "filter_commentary": "Western systems often too slow. Detection, verification, approval, legal review, translation, coordination. Many hours pass. Adversary plans for this.\n\nWe learn: need pre-authorized responses. Playbook ready. When attack comes, do not start from zero. Match pattern, deploy counter. Hours, not days.\n\nStill, some attacks are novel. Need verification, need careful response. Tension between speed and accuracy. Move too fast, make mistakes adversary exploits. Move too slow, narrative hardens.\n\nNo perfect answer. Only trade-offs.",
       "in_game": "Affects fact-checking modifiers. Scenarios with high Hours Active (48+) penalize reactive responses and reward prior pre-bunking. Low Hours Active gives fact-checking bonus but demands speed.",
       "mechanical_effects": {
         "0-12h": "+15% fact-check success",
@@ -321,7 +319,7 @@
       "short": "Divide and conquer, information age style.",
       "filter_intro": "Adversary cannot defeat NATO in battle. So adversary tries to make NATO defeat itself. Division is cheaper than divisions.",
       "body": "Alliance fracture narratives aim to undermine coalition cohesion by exploiting real or fabricated tensions between allies. The strategic goal is clear: a unified alliance is strong; a fractured alliance is vulnerable.\n\nCommon tactics:\n• Leaked 'private communications' showing ally criticism\n• Amplifying genuine policy disagreements\n• Fabricated insider reports of secret deals or betrayals\n• Historical grievance activation\n• 'Burden sharing' resentment narratives\n\nThese narratives succeed because:\n• Alliances do have internal tensions (grain of truth)\n• Citizens often skeptical of foreign entanglements\n• Nationalism easily triggered\n• Difficult to prove universal allied harmony",
-      "filter_commentary": "Classic Russian playbook. Used against NATO for decades. 'Americans do not really care about Europe.' 'Europeans are free-riding on American protection.' 'Baltic states are provoking conflict for own interests.' All designed to make alliance question itself.\n\nAlso used within countries. 'Your government is puppet of foreign power.' 'Your leaders care more about allies than own citizens.' Sovereignty anxiety is powerful.\n\nBest response: visible unity. Joint statements, coordinated messaging, leaders appearing together. Actions speak louder than denials. When adversary says 'alliance is divided,' show alliance is united.\n\nAlso important: do not pretend disagreements don't exist. Adversary will find real tensions and exploit them. Better to acknowledge: 'Allies sometimes disagree. That is normal. But we remain committed to common defense.' Authentic unity is stronger than fake harmony.",
+      "filter_commentary": "Classic adversary playbook. Used against NATO for decades. 'Americans do not really care about Europe.' 'Europeans are free-riding on American protection.' 'Baltic states are provoking conflict for own interests.' All designed to make alliance question itself.\n\nAlso used within countries. 'Your government is puppet of foreign power.' 'Your leaders care more about allies than own citizens.' Sovereignty anxiety is powerful.\n\nBest response: visible unity. Joint statements, coordinated messaging, leaders appearing together. Actions speak louder than denials. When adversary says 'alliance is divided,' show alliance is united.\n\nAlso important: do not pretend disagreements don't exist. Adversary will find real tensions and exploit them. Better to acknowledge: 'Allies sometimes disagree. That is normal. But we remain committed to common defense.' Authentic unity is stronger than fake harmony.",
       "typical_response_effectiveness": {
         "fact_check": "Useful for fake documents; limited for real tensions",
         "pre_bunk": "Effective - warn about division tactics",
@@ -387,7 +385,7 @@
       "short": "You cannot respond to everything.",
       "filter_intro": "In real operations, resources are always limited. Time, people, attention - never enough. Game reflects this.",
       "body": "Manpower represents your team's finite capacity to respond to information threats. Every response consumes resources that cannot be used elsewhere.\n\nThis abstraction captures real-world constraints:\n• Staff hours for research, writing, coordination\n• Leadership attention and decision-making bandwidth\n• Platform/media access and relationships\n• Credibility capital (overuse diminishes impact)\n\nResource scarcity forces prioritization. You cannot respond to every threat at maximum intensity. Sometimes the right choice is a minimal response to conserve resources for larger battles.",
-      "filter_commentary": "Western organizations often think they can 'surge' information operations when needed. Wrong. Capability takes time to build. Relationships, skills, trusted voices - cannot create overnight.\n\nIn Baltic information agencies, we run lean always. Every operation, ask: 'Is this worth the resources? What are we not doing if we do this?'\n\nGame teaches this discipline. Unlimited resources would teach wrong lesson. Real cognitive warfare is about allocation, prioritization, strategic patience.",
+      "filter_commentary": "Western organizations often think they can 'surge' information operations when needed. Wrong. Capability takes time to build. Relationships, skills, trusted voices - cannot create overnight.\n\nWe run lean, always. Every operation, ask: 'Is this worth the resources? What are we not doing if we do this?'\n\nGame teaches this discipline. Unlimited resources would teach wrong lesson. Real cognitive warfare is about allocation, prioritization, strategic patience.",
       "in_game": "Each response costs Manpower. Total available per round is limited. Overspending early leaves you vulnerable later. Underspending on critical threats causes meter damage. Balance is essential."
     },
 
@@ -422,3 +420,4 @@
     }
   }
 }
+

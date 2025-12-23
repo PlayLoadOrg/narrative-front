@@ -2,6 +2,11 @@
 import { useEffect, useRef, useState } from 'react';
 import type { AudioTrack } from '../engine/types';
 
+// Import the audio files directly
+import neutralMp3 from '../assets/neutral.mp3';
+import unityMp3 from '../assets/unity.mp3';
+import fracturingMp3 from '../assets/fracturing.mp3';
+
 interface UseAudioReturn {
   play: () => void;
   pause: () => void;
@@ -17,6 +22,13 @@ export function useAudio(initialVolume: number = 0.6): UseAudioReturn {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const fadeIntervalRef = useRef<number | null>(null);
 
+  // Track map with imported files
+  const trackMap: Record<AudioTrack, string> = {
+    neutral: neutralMp3,
+    unity: unityMp3,
+    fracturing: fracturingMp3
+  };
+
   // Load audio file based on track
   const loadTrack = (track: AudioTrack) => {
     if (audioRef.current) {
@@ -25,12 +37,6 @@ export function useAudio(initialVolume: number = 0.6): UseAudioReturn {
     }
 
     try {
-      const trackMap: Record<AudioTrack, string> = {
-        neutral: '/src/assets/neutral.mp3',
-        unity: '/src/assets/unity.mp3',
-        fracturing: '/src/assets/fracturing.mp3'
-      };
-
       audioRef.current = new Audio(trackMap[track]);
       audioRef.current.volume = initialVolume;
       audioRef.current.loop = true;

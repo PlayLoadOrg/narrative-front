@@ -1,0 +1,135 @@
+/* src/components/game/CardDraftPhase.module.css */
+.container {
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 1.75rem;
+  color: var(--cyan-400);
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: var(--gray-300);
+  font-style: italic;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .cardGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  background: rgba(0, 51, 102, 0.2);
+  border: 2px solid var(--nato-blue);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.card:hover:not(.disabled) {
+  border-color: var(--cyan-400);
+  background: rgba(0, 102, 204, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(34, 211, 238, 0.3);
+}
+
+.card.selected {
+  border-color: var(--cyan-400);
+  background: rgba(34, 211, 238, 0.2);
+  box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.3);
+}
+
+.card.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardType {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--cyan-400);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.checkIcon {
+  color: var(--green-400);
+}
+
+.cardTitle {
+  font-size: 1.125rem;
+  color: white;
+  margin: 0;
+  font-weight: 700;
+}
+
+.cardMeta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--gray-400);
+}
+
+.cardTheme {
+  text-transform: capitalize;
+}
+
+.cardFamily {
+  text-transform: capitalize;
+  color: var(--cyan-400);
+}
+
+.cardDescription {
+  flex: 1;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--gray-300);
+  margin: 0;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--midnight-border);
+}
+
+.cardCost {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--cyan-400);
+}
+
+.actions {
+  margin-top: 1.5rem;
+}
