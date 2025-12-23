@@ -21,33 +21,22 @@ interface FilterChatProps {
 export function FilterChat({ messages }: FilterChatProps) {
   const chatEndRef = useRef<HTMLDivElement>(null);
   const [displayedMessages, setDisplayedMessages] = useState<FilterMessage[]>([]);
-  const [currentTypingIndex, setCurrentTypingIndex] = useState(-1);
 
   // Add messages one at a time with slight delay
   useEffect(() => {
     if (messages.length === 0) {
       setDisplayedMessages([]);
-      setCurrentTypingIndex(-1);
       return;
     }
 
-    // Check if this is a new set of messages
-    if (messages.length !== displayedMessages.length || 
-        messages[messages.length - 1]?.timestamp !== displayedMessages[displayedMessages.length - 1]?.timestamp) {
-      
-      setDisplayedMessages([]); // Reset
-      setCurrentTypingIndex(0);
-      
-      messages.forEach((msg, index) => {
-        setTimeout(() => {
-          setDisplayedMessages(prev => [...prev, msg]);
-          if (index === messages.length - 1) {
-            setCurrentTypingIndex(index);
-          }
-        }, index * 100); // Stagger message appearance
-      });
-    }
-  }, [messages, displayedMessages]);
+    setDisplayedMessages([]); // Reset
+    
+    messages.forEach((msg, index) => {
+      setTimeout(() => {
+        setDisplayedMessages(prev => [...prev, msg]);
+      }, index * 100); // Stagger message appearance
+    });
+  }, [messages]);
 
   // Auto-scroll to bottom when new messages appear
   useEffect(() => {
@@ -81,7 +70,8 @@ export function FilterChat({ messages }: FilterChatProps) {
                 {message.sender === 'filter' ? 'Filter' : 'System'}
               </div>
               <div className={styles.text}>
-                {index === currentTypingIndex && index === displayedMessages.length - 1 ? (
+                {/* Only typewrite if this is the most recently added message */}
+                {index === displayedMessages.length - 1 ? (
                   <Typewriter text={message.text} speed={30} />
                 ) : (
                   message.text

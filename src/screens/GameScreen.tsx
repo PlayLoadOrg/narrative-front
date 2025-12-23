@@ -1,5 +1,5 @@
 // src/screens/GameScreen.tsx
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { AlertTriangle } from 'lucide-react';
 import { Card } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
@@ -66,9 +66,6 @@ export function GameScreen({
   const [selectedResponses, setSelectedResponses] = useState<PlayerResponse[]>([]);
   const [currentOutcome, setCurrentOutcome] = useState<any>(null);
   
-  // Filter Messages
-  const [filterMessages, setFilterMessages] = useState<any[]>([]);
-  
   // Audio & UI
   const { audio, toggleMute } = useUIStore();
   const audioPlayer = useAudio(audio.volume);
@@ -76,31 +73,35 @@ export function GameScreen({
   // Outcome Calculator
   const [outcomeCalculator] = useState(() => new OutcomeCalculator());
 
+  // Memoize Filter messages to prevent recreation with new timestamps
+  const filterMessages = useMemo(() => {
+    if (gamePhase === 'reaction' && currentScenario?.filter?.briefing) {
+      return [
+        createFilterMessage(currentScenario.filter.briefing.preInject),
+        createFilterMessage(currentScenario.filter.briefing.assessment)
+      ];
+    }
+    return [];
+  }, [gamePhase, currentScenario]);
+
   // Load scenario when round changes
   useEffect(() => {
     loadScenario(round);
-    // Draw 3 cards for anticipation phase
     setDraftCards(drawCards(3));
     setGamePhase('anticipation');
     setSelectedResponses([]);
   }, [round, loadScenario, drawCards]);
 
-  // Show Filter's briefing when entering reaction phase
+  // Switch to scenario tab when entering reaction phase
   useEffect(() => {
-    if (gamePhase === 'reaction' && currentScenario?.filter?.briefing) {
-      const messages = [
-        createFilterMessage(currentScenario.filter.briefing.preInject),
-        createFilterMessage(currentScenario.filter.briefing.assessment)
-      ];
-      setFilterMessages(messages);
+    if (gamePhase === 'reaction') {
       setActiveTab('scenario');
     }
-  }, [gamePhase, currentScenario]);
+  }, [gamePhase]);
 
   // Start audio when game loads (only once)
   useEffect(() => {
     if (!audio.isMuted) {
-      // Small delay to ensure audio context is ready
       const timer = setTimeout(() => {
         audioPlayer.play();
       }, 500);
@@ -110,7 +111,6 @@ export function GameScreen({
 
   // Handle audio track switching based on meter position
   useEffect(() => {
-    // Determine which track should play based on meter value
     let targetTrack: AudioTrack;
     
     if (meter >= 3) {
@@ -121,7 +121,6 @@ export function GameScreen({
       targetTrack = 'neutral';
     }
     
-    // Switch track if different from current
     if (targetTrack !== audioPlayer.currentTrack) {
       audioPlayer.switchTrack(targetTrack);
     }
@@ -131,21 +130,17 @@ export function GameScreen({
    * Handle card selection during anticipation phase (now supports 0-3 cards)
    */
   const handleCardSelection = (cards: AnticipationCard[]) => {
-    // Deduct total manpower
     const totalCost = cards.reduce((sum, card) => sum + card.cost, 0);
     onManpowerChange(-totalCost);
     
-    // Add all to built cards
     setBuiltCards(prev => [...prev, ...cards]);
     
-    // Register pre-bunks if applicable
     cards.forEach(card => {
       if (card.type === 'PREBUNK') {
         onRegisterPreBunk(card.targetTheme);
       }
     });
     
-    // Move to transition phase
     setGamePhase('transition');
   };
 
@@ -163,12 +158,10 @@ export function GameScreen({
     const existing = selectedResponses.find(r => r.type === response.type);
     
     if (existing) {
-      // Replace with new version (e.g., changing intensity)
       setSelectedResponses(prev => 
         prev.map(r => r.type === response.type ? response : r)
       );
     } else {
-      // Add new response
       setSelectedResponses(prev => [...prev, response]);
     }
   };
@@ -183,12 +176,10 @@ export function GameScreen({
   const handleConfirmResponse = () => {
     if (!currentScenario) return;
     
-    // If no responses selected, default to IGNORE
     const responses = selectedResponses.length > 0 
       ? selectedResponses 
       : [{ type: RESPONSE_TYPES.IGNORE, manpowerCost: 0 }];
     
-    // Calculate outcome
     const outcome = outcomeCalculator.calculateOutcome(
       responses,
       currentScenario.inject.primary.intelligence,
@@ -196,10 +187,8 @@ export function GameScreen({
       currentScenario.inject.primary.theme
     );
     
-    // Record scenario history
     onRecordScenario(currentScenario, responses, outcome);
     
-    // Store outcome and show outcome screen
     setCurrentOutcome(outcome);
     setShowOutcome(true);
   };
@@ -210,22 +199,16 @@ export function GameScreen({
   const handleOutcomeContinue = () => {
     if (!currentOutcome) return;
     
-    // Apply meter change
     onMeterChange(currentOutcome.meterShift);
-    
-    // Deduct manpower
     onManpowerChange(-currentOutcome.manpowerCost);
     
-    // Check if game is over
     if (round >= GAME_CONFIG.TOTAL_ROUNDS - 1) {
       onGameEnd();
       return;
     }
     
-    // Advance to next round
     onAdvanceRound();
     
-    // Reset UI state
     setShowOutcome(false);
     setCurrentOutcome(null);
     setSelectedResponses([]);
@@ -236,12 +219,10 @@ export function GameScreen({
    * Settings menu handlers
    */
   const handleSaveGame = () => {
-    // Implementation through game store
     alert('Game saved!');
   };
 
   const handleLoadGame = () => {
-    // Implementation through game store
     alert('Game loaded!');
   };
 
@@ -257,13 +238,11 @@ export function GameScreen({
 
   const handleToggleMute = () => {
     const newMutedState = !audio.isMuted;
-    toggleMute(); // This updates the UI state
+    toggleMute();
     
     if (newMutedState) {
-      // Just muted - pause audio
       audioPlayer.pause();
     } else {
-      // Just unmuted - resume audio
       audioPlayer.play();
     }
   };
@@ -319,7 +298,7 @@ export function GameScreen({
       />
 
       <Card>
-        <div className={styles.headerSubtitle}>Information Warfare Simulator</div>
+        <div className={styles.headerSubtitle}>Strategic Communications Coordinator</div>
 
         {/* Resource Display */}
         <div className={styles.resourceDisplay}>
