@@ -1,26 +1,66 @@
 // src/components/game/FilterChat.tsx
-import { MessageSquare } from 'lucide-react';
-import { useTranslation } from '../../hooks/useTranslation';
+import { useState, useEffect, useRef } from 'react';
+import { Shield } from 'lucide-react';
+import { Typewriter } from './Typewriter';
 import styles from './FilterChat.module.css';
 
 interface FilterMessage {
-  id: string;
-  sender: 'filter';
+  sender: 'filter' | 'system';
   text: string;
+  timestamp: number;
 }
 
 interface FilterChatProps {
   messages: FilterMessage[];
 }
 
+/**
+ * Filter Chat Component
+ * Simulates a chat interface where Filter's messages appear with typewriter effect
+ */
 export function FilterChat({ messages }: FilterChatProps) {
-  const { t } = useTranslation();
+  const chatEndRef = useRef<HTMLDivElement>(null);
+  const [displayedMessages, setDisplayedMessages] = useState<FilterMessage[]>([]);
+  const [currentTypingIndex, setCurrentTypingIndex] = useState(-1);
+
+  // Add messages one at a time with slight delay
+  useEffect(() => {
+    if (messages.length === 0) {
+      setDisplayedMessages([]);
+      setCurrentTypingIndex(-1);
+      return;
+    }
+
+    // Check if this is a new set of messages
+    if (messages.length !== displayedMessages.length || 
+        messages[messages.length - 1]?.timestamp !== displayedMessages[displayedMessages.length - 1]?.timestamp) {
+      
+      setDisplayedMessages([]); // Reset
+      setCurrentTypingIndex(0);
+      
+      messages.forEach((msg, index) => {
+        setTimeout(() => {
+          setDisplayedMessages(prev => [...prev, msg]);
+          if (index === messages.length - 1) {
+            setCurrentTypingIndex(index);
+          }
+        }, index * 100); // Stagger message appearance
+      });
+    }
+  }, [messages, displayedMessages]);
+
+  // Auto-scroll to bottom when new messages appear
+  useEffect(() => {
+    chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [displayedMessages]);
 
   if (messages.length === 0) {
     return (
-      <div className={styles.empty}>
-        <MessageSquare className={styles.emptyIcon} size={48} />
-        <p className={styles.emptyText}>{t('filter.emptyState')}</p>
+      <div className={styles.container}>
+        <div className={styles.empty}>
+          <Shield size={32} className={styles.iconLarge} />
+          <p>Awaiting Filter's assessment...</p>
+        </div>
       </div>
     );
   }
@@ -28,27 +68,49 @@ export function FilterChat({ messages }: FilterChatProps) {
   return (
     <div className={styles.container}>
       <div className={styles.messages}>
-        {messages.map((message) => (
-          <div key={message.id} className={styles.message}>
+        {displayedMessages.map((message, index) => (
+          <div 
+            key={`${message.timestamp}-${index}`}
+            className={`${styles.message} ${message.sender === 'filter' ? styles.filterMessage : styles.systemMessage}`}
+          >
             <div className={styles.avatar}>
-              <MessageSquare size={16} />
+              <Shield size={20} />
             </div>
             <div className={styles.content}>
-              <div className={styles.sender}>FILTER</div>
-              <div className={styles.text}>{message.text}</div>
+              <div className={styles.sender}>
+                {message.sender === 'filter' ? 'Filter' : 'System'}
+              </div>
+              <div className={styles.text}>
+                {index === currentTypingIndex && index === displayedMessages.length - 1 ? (
+                  <Typewriter text={message.text} speed={30} />
+                ) : (
+                  message.text
+                )}
+              </div>
             </div>
           </div>
         ))}
+        <div ref={chatEndRef} />
       </div>
     </div>
   );
 }
 
-// Helper function to create filter messages
+/**
+ * Helper functions to create message objects
+ */
 export function createFilterMessage(text: string): FilterMessage {
   return {
-    id: `msg-${Date.now()}-${Math.random()}`,
     sender: 'filter',
-    text
+    text,
+    timestamp: Date.now()
+  };
+}
+
+export function createSystemMessage(text: string): FilterMessage {
+  return {
+    sender: 'system',
+    text,
+    timestamp: Date.now()
   };
 }

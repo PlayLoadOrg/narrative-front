@@ -1,0 +1,204 @@
+/* src/components/game/FilterChat.module.css */
+.container {
+  width: 100%;
+  min-height: 200px;
+  max-height: 400px;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--nato-blue);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  min-height: 200px;
+  color: var(--gray-400);
+}
+
+.iconLarge {
+  color: var(--cyan-400);
+  opacity: 0.5;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0.8; }
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.message {
+  display: flex;
+  gap: 0.75rem;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: rgba(0, 51, 102, 0.5);
+  border: 2px solid var(--cyan-400);
+  box-shadow: 0 0 15px rgba(34, 211, 238, 0.5);
+}
+
+.filterMessage .avatar {
+  background: rgba(34, 211, 238, 0.2);
+  border-color: var(--cyan-400);
+  box-shadow: 
+    0 0 15px rgba(34, 211, 238, 0.6),
+    0 0 30px rgba(34, 211, 238, 0.3),
+    inset 0 0 10px rgba(34, 211, 238, 0.2);
+  animation: shieldGlow 2s ease-in-out infinite;
+}
+
+@keyframes shieldGlow {
+  0%, 100% {
+    box-shadow: 
+      0 0 15px rgba(34, 211, 238, 0.6),
+      0 0 30px rgba(34, 211, 238, 0.3),
+      inset 0 0 10px rgba(34, 211, 238, 0.2);
+  }
+  50% {
+    box-shadow: 
+      0 0 20px rgba(34, 211, 238, 0.8),
+      0 0 40px rgba(34, 211, 238, 0.5),
+      inset 0 0 15px rgba(34, 211, 238, 0.4);
+  }
+}
+
+.filterMessage .avatar svg {
+  color: var(--cyan-400);
+  filter: drop-shadow(0 0 4px rgba(34, 211, 238, 0.8));
+}
+
+.systemMessage .avatar {
+  background: rgba(100, 116, 139, 0.2);
+  border-color: var(--gray-500);
+  box-shadow: 0 0 10px rgba(100, 116, 139, 0.3);
+}
+
+.systemMessage .avatar svg {
+  color: var(--gray-400);
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+}
+
+.sender {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.filterMessage .sender {
+  color: var(--cyan-400);
+  text-shadow: 0 0 10px rgba(34, 211, 238, 0.5);
+}
+
+.systemMessage .sender {
+  color: var(--gray-400);
+}
+
+.text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--gray-200);
+  padding: 0.75rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: var(--radius-md);
+  border-left: 3px solid;
+}
+
+.filterMessage .text {
+  border-left-color: var(--cyan-400);
+  background: rgba(0, 51, 102, 0.2);
+}
+
+.systemMessage .text {
+  border-left-color: var(--gray-500);
+}
+
+/* Typewriter cursor animation */
+:global(.typewriter-cursor) {
+  display: inline-block;
+  animation: blink 1s step-end infinite;
+  color: var(--cyan-400);
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Scrollbar styling */
+.container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.container::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: var(--radius-sm);
+}
+
+.container::-webkit-scrollbar-thumb {
+  background: var(--cyan-400);
+  border-radius: var(--radius-sm);
+  opacity: 0.5;
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+  background: var(--cyan-300);
+}
+
+/* Mobile adjustments */
+@media (max-width: 640px) {
+  .avatar {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .avatar svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .text {
+    font-size: 0.85rem;
+    padding: 0.625rem;
+  }
+  
+  .sender {
+    font-size: 0.7rem;
+  }
+}
