@@ -6,7 +6,7 @@ export function PlayloadFooter() {
     <footer className={styles.footer}>
       <div className={styles.container}>
         <a
-          href="https://playloadorg.github.io/landing-main-1/"
+          href="https://playload.org"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.link}
